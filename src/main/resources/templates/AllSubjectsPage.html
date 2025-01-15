@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AllSubjects</title>
+    <link rel="stylesheet" href="/Styles.css">
+    <link rel="stylesheet" href="/AllSubjectsPage.css">
+    <link rel="stylesheet" href="/Fragments.css">
+</head>
+<body class="bodyAllSubjectsPage">
+
+<div th:replace="fragments :: backButton"></div>
+
+<div th:replace="Fragments :: linkedInLinks"></div>
+
+<div class="MainDiv" style="align-content: flex-start; justify-content: center">
+    <h3 class="h3SpørgsmålTitle">Spørgsmål:</h3>
+
+    <p th:text="${question.question}"></p>
+
+    <form action="/AllSubjectsAnswer" method="post">
+        <input type="hidden" name="id" th:value="${question.id}">
+        <input type="hidden" name="subject" th:value="${question.subject}">
+        <input type="hidden" name="question" th:value="${question.question}">
+        <input type="hidden" name="answer" th:value="${question.answer}">
+        <button class="buttonSeSvar">Se Svar</button>
+    </form>
+</div>
+
+</body>
+</html>

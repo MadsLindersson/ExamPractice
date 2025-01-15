@@ -1,0 +1,44 @@
+.bodyHomePage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MenuATag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    text-decoration: none;
+    width: 10vw;
+    height: 15vh;
+    margin: 6%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.MenuATag:visited{
+    color: white;
+}
+
+.MenuATag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, transparent, #80d5cb, transparent) top,
+    linear-gradient(to bottom, transparent, #80d5cb, transparent) right,
+    linear-gradient(to right, transparent, #80d5cb, transparent) bottom,
+    linear-gradient(to bottom, transparent, #80d5cb, transparent) left;
+    background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.MenuATag:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(128, 213, 203, 0.5);
+}

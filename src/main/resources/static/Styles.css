@@ -1,0 +1,67 @@
+body{
+    background-image: url(Coding-background-img.png);
+    height: 100vh;
+    width: 100%;
+    color: #EAEAEA;
+}
+
+.MainDiv{
+    display: flex;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 50%;
+    padding: 2%;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.MainDiv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, transparent, #80d5cb, transparent) top,
+    linear-gradient(to bottom, transparent, #80d5cb, transparent) right,
+    linear-gradient(to right, transparent, #80d5cb, transparent) bottom,
+    linear-gradient(to bottom, transparent, #80d5cb, transparent) left;
+    background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+p {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #80d5cb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1vh;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    transform-origin: center;
+    box-shadow: 0 0 10px #80d5cb, 0 0 20px #80d5cb;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1) translateX(-50%) translateY(0);
+    box-shadow: 0 0 25px #80d5cb, 0 0 40px #80d5cb;
+}
