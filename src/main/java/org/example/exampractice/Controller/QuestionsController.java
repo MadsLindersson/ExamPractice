@@ -18,12 +18,12 @@ public class QuestionsController {
     @GetMapping("AllSubjects")
     public String AllSubjects(Model model) {
         model.addAttribute("question", qs.randomQuestionUsingParam("AlleFag"));
-        return "AllSubjectsPage";
+        return "AllSubjectsPageSecondSemester";
     }
 
     @PostMapping("AllSubjectsAnswer")
     public String AllSubjectsAnswer(Model model, @ModelAttribute Question question) {
         model.addAttribute("question", question);
-        return "AllSubjectsAnswerPage";
+        return "AllSubjectsAnswerPageSecondSemester";
     }
 }

@@ -13,8 +13,17 @@ public class HomeController {
     QuestionService qs;
 
     @GetMapping("/")
-    public String home(Model model) {
-        model.addAttribute("list", qs.makeListOfQuestions());
+    public String home() {
         return "Home";
+    }
+
+    @GetMapping("1.semester")
+    public String firstSemester() {
+        return "1.semester";
+    }
+
+    @GetMapping("2.semester")
+    public String secondSemester() {
+        return "2.semester";
     }
 }

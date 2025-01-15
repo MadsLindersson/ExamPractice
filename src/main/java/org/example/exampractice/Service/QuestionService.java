@@ -34,14 +34,14 @@ public class QuestionService {
                 int randomIndexITF = (int) (Math.random() * fetchListOfQuestionsBySubject(ITF).size());
                 yield makeListOfQuestions().get(randomIndexITF);
             }
-            default -> new Question(1, null, "", "");
+            default -> new Question(1, null,1, "", "");
         };
     }
 
     public List<Question> fetchListOfQuestionsBySubject (Question.Subjects subject) {
         List<Question> questions = new ArrayList<>();
         for(Question element : makeListOfQuestions()) {
-            if(element.subject.equals(subject)) {
+            if(element.getSubject().equals(subject)) {
                 questions.add(element);
             }
         }
@@ -52,10 +52,22 @@ public class QuestionService {
         List<Question> questions = new ArrayList<Question>();
 
         int count = 1;
+//1. semester:--------------------------------------------------------------------------------------------------------//
+//Programmerings spørgsmål:-------------------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+//Systemudvikling spørgsmål:------------------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+//Teknologi spørgsmål:------------------------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+//It- Og Forretningsforståelse spørgsmål:-----------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+
+//2. semester:--------------------------------------------------------------------------------------------------------//
 //Programmerings spørgsmål:-------------------------------------------------------------------------------------------//
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "<b>Hvad er forskellen på en LinkedList og en ArrayList?</b>",
                 """
                         En LinkedList bruger noder til at lagre data, hvor hver node indeholder en reference til næste (og eventuelt forrige) node. Det gør indsættelse og sletning hurtigere midt i listen, men adgang til elementer langsom.
@@ -67,6 +79,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad er en LinkedList?",
                 """
                         En LinkedList er en datalstruktur, hvor elementerne er organiseret som noder, der hver indeholder en værdi og en reference (peger) til den næste node i listen. Denne struktur gør det nemt at indsætte og fjerne elementer i midten af listen, men adgang til elementer er langsommere end andre datastrukture som f.eks. ArrayList.
@@ -77,6 +90,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad er en Unit test? Og hvad er formålet med dette?",
                 """
                         En unit test er en testmetode, der verificerer funktionaliteten af en enkelt enhed eller komponent i en applikation, typisk en individuel funktion eller klasse, isoleret fra resten af systemet.
@@ -88,6 +102,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad er Singleton-patternet? Og hvad er formålet med dette?",
                 """
                         Singleton-patternet er et designmønster, der sikrer, at en klasse kun har én instans, og giver global adgang til denne instans.
@@ -102,6 +117,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad er et ER-diagram? Og hvad er formålet med dette?",
                 """
                         Et ER-diagram (Entity-Relationship-diagram) er en visuel repræsentation af data og deres relationer i en database. Det viser entiteter (tabeller), deres attributter (kolonner) og relationer mellem dem.
@@ -113,6 +129,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad er forskellen på en Primary key, en Candidate key og en Foreign key?",
                 """
                         Primary key: En unik identifikator for hver række i en tabel. Der kan kun være én primær nøgle per tabel.
@@ -126,6 +143,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad er Aggregation functions? Og hvad er formålet med disse?",
                 """
                         Disse funktioner anvendes til at opsummere data på en gruppebasis. De beregner en værdi ud fra flere rækker i en tabel.
@@ -139,6 +157,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad er en Subquery? Og hvad er formålet med den?",
                 """
                         En subquery er en forespørgsel, der er indlejret i en anden forespørgsel. Subqueries kan bruges i SELECT, INSERT, UPDATE eller DELETE sætninger.
@@ -153,6 +172,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad er normalisering i databasedesign? og hvad er formålet med dette?",
                 """
                         Normalisering i databasedesign er processen, hvor man organiserer data i en database for at reducere redundans og undgå inkonsistens i dataene. Dette gøres ved at opdele data i mindre tabeller og definere relationer mellem dem.
@@ -165,6 +185,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad definerer de første tre normalformer (1NF, 2NF og 3NF)?",
                 """
                         1NF (Første normalform): En tabel er i 1NF, hvis alle kolonner indeholder atomære (ufordelte) værdier, og hver række er unik.
@@ -179,6 +200,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvordan kan normalisering hjælpe med at reducere redundans og øge dataintegritet?",
                 """
                         Normalisering hjælper med at reducere redundans ved at opdele data i mindre tabeller og fjerne gentagne informationer. Dette sikrer, at hver enhed kun optræder én gang i systemet. Samtidig øger det dataintegriteten ved at minimere risikoen for inkonsistente opdateringer, da data kun skal opdateres ét sted.
@@ -189,6 +211,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad er forskellen mellem checked exceptions og unchecked exceptions?",
                 """
                         Checked exceptions er undtagelser, der skal håndteres eksplicit med en try-catch blok eller erklæres med throws i metoden. De er typisk forudsigelige fejl, som kan opstå under normale forhold, f.eks. fil-læsning.
@@ -201,6 +224,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "DDL (Data Definition Language) er en del af SQL, der bruges til at definere og ændre strukturen af databaser og tabeller. DDL-kommandoer omfatter CREATE, ALTER, DROP, og TRUNCATE, som bruges til at oprette, ændre, slette eller rydde tabeller og andre databaseobjekter.",
                 """
                         DDL (Data Definition Language) er en del af SQL, der bruges til at definere og ændre strukturen af databaser og tabeller. DDL-kommandoer omfatter CREATE, ALTER, DROP, og TRUNCATE, som bruges til at oprette, ændre, slette eller rydde tabeller og andre databaseobjekter.
@@ -211,6 +235,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad er DML (Data Manipulation Language)?",
                 """
                         DML (Data Manipulation Language) er en del af SQL, der bruges til at manipulere data i en database. DML-kommandoer omfatter SELECT, INSERT, UPDATE, og DELETE, som bruges til at hente, indsætte, opdatere eller slette data i tabeller.
@@ -221,6 +246,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad betyder 'server-side' i relation til en webapplikation?",
                 """
                         Server-side refererer til backend i en webapplikation, hvor al forretningslogik, datahåndtering og serverkommunikation foregår. Frontend er den del af applikationen, der kører på klientens enhed (browser), og som brugeren interagerer med. Server-side (backend) leverer data og funktionalitet til frontend (klientsiden).
@@ -231,6 +257,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad er formålet med at bruge packages i en Spring-applikation?",
                 """
                         Formålet med at bruge packages i en Spring-applikation er at organisere koden i logiske enheder, hvilket gør den lettere at vedligeholde og sikrer, at relaterede klasser og komponenter er samlet. Packages hjælper med at opdele applikationen i moduler og understøtter bedre struktur, sikkerhed og styring af afhængigheder. I et Spring Boot-projekt kan dette eksempelvis omfatte packages som Controller, Model, Service og Repository, hvor hver package indeholder de relevante klasser og komponenter.
@@ -241,6 +268,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad bruges 'Static'-mappen til i en Spring-applikation?",
                 """
                         I en Spring-applikation bruges 'static'-mappen til at gemme statiske ressourcer som billeder, CSS-filer, JavaScript og andre filer, der skal være tilgængelige direkte for klienten (browseren). Disse filer kan tilgås uden behov for at blive behandlet af en controller
@@ -251,6 +279,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad bruges ’Template’-mappen til i en Spring applikation?",
                 """
                         I en Spring-applikation bruges 'template'-mappen til at opbevare filer, der genererer HTML-sider, som vises for brugeren. Disse filer bruger ofte skabelonsystemer som Thymeleaf til at indsætte data dynamisk.
@@ -262,6 +291,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad er en Iterator i forbindelse med en LinkedList?",
                 """
                         En Iterator i forbindelse med en LinkedList er et objekt, der gør det muligt at traversere (gennemgå) listen element for element. Den giver metoder som hasNext() for at kontrollere, om der er flere elementer, og next() for at hente det næste element i listen. Iteratoren hjælper med at navigere gennem en LinkedList uden at bruge indeksering direkte.
@@ -272,6 +302,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad er en Try/Catch block? Og hvad er formålet med den?",
                 """
                         En Try/Catch block bruges til at håndtere undtagelser (fejl) i Java. Koden inden for try-blokken udføres, og hvis en undtagelse opstår, fanges den af catch-blokken. Formålet er at forhindre, at programmet crasher ved fejl, og i stedet håndtere dem på en kontrolleret måde, f.eks. ved at logge fejlinformation eller give brugeren en passende fejlmeddelelse.
@@ -282,6 +313,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad er Git?",
                 """
                         Git er et versionsstyringssystem, der bruges til at spore ændringer i filer og samarbejde om projekter. Det gør det muligt for flere udviklere at arbejde på samme kodebase samtidig, gemme versioner af koden og nemt rulle ændringer tilbage, hvis det er nødvendigt. Git er decentraliseret, hvilket betyder, at hver udvikler har en lokal kopi af hele projektet.
@@ -292,6 +324,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad er GitHub?",
                 """
                         GitHub er en webbaseret platform, der hoster Git-repositories og muliggør samarbejde om softwareudviklingsprojekter. Den tilbyder funktioner som versionkontrol, pull requests, issues og code review, og gør det nemt for udviklere at dele og arbejde på kode sammen online. Git og GitHub er ikke det samme; Git er et versionsstyringssystem, mens GitHub er en platform, der bruger Git til at administrere kode online.
@@ -302,6 +335,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad er den relationelle datamodel?",
                 """
                         Den relationelle datamodel er en måde at organisere data i tabeller (relationer), hvor hver tabel består af rækker (poster) og kolonner (attributter). Data i forskellige tabeller kan være forbundet ved hjælp af nøgler, som f.eks. primærnøgler og fremmednøgler. Modellen bruges i relationelle databaser som MySQL.
@@ -312,6 +346,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad er en database tabel? Og hvad er en database kolonne?",
                 """
                         En database tabel er en struktur i en database, der organiserer data i rækker og kolonner. Hver tabel repræsenterer en samling af relaterede data, som f.eks. kunder, ordrer eller produkter.
@@ -322,6 +357,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad er ’JOIN’ i SQL? (LEFT, RIGHT, INNER & FULL)",
                 """
                         JOIN i SQL bruges til at kombinere data fra flere tabeller baseret på en fælles kolonne.
@@ -337,6 +373,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvordan opretter man forbindelse til en database i Java?",
                 """
                         For at oprette forbindelse til en database i Java benyttes JDBC (Java Database Connectivity). Processen indebærer, at man først indlæser den relevante database-driver, som gør det muligt for Java-applikationen at kommunikere med den specifikke database. Herefter opretter man en forbindelse til databasen ved hjælp af en URL, brugernavn og adgangskode, hvilket giver applikationen adgang til at udføre SQL-forespørgsler og opdatere data i databasen. Denne forbindelse håndteres gennem et Connection-objekt, som anvendes til at kommunikere med databasen.
@@ -347,6 +384,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad er et Resultset i forbindelse med SQL?",
                 """
                         Et ResultSet i forbindelse med SQL er et objekt i Java, der indeholder data returneret fra en SQL-forespørgsel. Det giver mulighed for at navigere gennem rækkerne i resultatet og hente kolonneværdier for hver række. ResultSet bruges typisk i forbindelse med en SELECT-forespørgsel og giver metoder til at få adgang til de enkelte dataelementer, såsom getString(), getInt() eller getDate().
@@ -357,6 +395,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad gør en BeanPropertyRowMapper?",
                 """
                         En BeanPropertyRowMapper i Java bruges til at mappe rækker fra et ResultSet til Java-objekter (beans). Når du bruger denne klasse, kan den automatisk konvertere kolonneværdierne fra databasen til de tilsvarende felter i et Java-objekt baseret på navneoverensstemmelse mellem kolonnerne og objektets egenskaber. Det gør det lettere at håndtere data fra databasen og omdanne dem til objekter uden behov for manuel mapping af hver kolonne.
@@ -367,6 +406,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad er forskellen på inline, internal og external CSS?",
                 """
                         Forskellen mellem inline, internal og external CSS ligger i, hvor stilen defineres og hvordan de anvendes i forhold til hinanden:
@@ -381,6 +421,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad bruges @GetMapping til i Spring?",
                 """
                         @GetMapping i Spring bruges til at oprette en metode i en controller, som håndterer HTTP GET-anmodninger. Det betyder, at når en bruger f.eks. besøger en bestemt URL, vil metoden blive kaldt og returnere data eller en webside til brugeren.
@@ -391,6 +432,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvordan adskiller @PostMapping sig fra @GetMapping?",
                 """
                         @PostMapping og @GetMapping bruges begge i Spring til at håndtere HTTP-anmodninger, men de adskiller sig i, hvordan de bruges:
@@ -405,6 +447,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad betyder 'lagdelt arkitektur' i Spring?",
                 """
                         Lagdelt arkitektur i Spring refererer til opdelingen af en applikation i separate lag, hvor hvert lag har et specifikt ansvar. De typiske lag er:
@@ -420,6 +463,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
+                2,
                 "Hvad gør @Autowired i Spring?",
                 """
                         @Autowired i Spring bruges til automatisk at injicere afhængigheder i en klasse. Det betyder, at Spring automatisk finder og indsætter de nødvendige objekter (f.eks. services eller repositories) i en klasse, uden at du selv behøver at skabe dem manuelt. Det hjælper med at gøre koden mere fleksibel og lettere at vedligeholde.
@@ -430,6 +474,7 @@ public class QuestionService {
 //Systemudviklings spørgsmål:-----------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er formålet med et klassediagram?",
                 """
                         Formålet med et klassediagram er at vise strukturen af en applikation ved at beskrive klasser, deres attributter, metoder og relationer (som arv eller association) til andre klasser. Det hjælper med at visualisere og planlægge, hvordan forskellige objekter i systemet interagerer, og giver et klart billede af systemets design.
@@ -440,6 +485,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad repræsenterer en association (lige linje) i et klassediagram?",
                 """
                         En associationslinje i et klassediagram repræsenterer en relation eller forbindelse mellem to klasser. Den angiver, hvordan objekter fra de to klasser er relateret til hinanden.
@@ -450,6 +496,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad symboliserer en kompositionsforbindelse (sort diamant) i et klassediagram?",
                 """
                         En kompositionsforbindelse (sort diamant) i et klassediagram symboliserer en stærk "del-af" relation, hvor den indeholdende klasse ejer og kontrollerer livscyklussen for de objekter, den er forbundet til. Hvis den indeholdende klasse slettes, slettes de relaterede objekter også.
@@ -460,6 +507,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad symboliserer en aggregeringsforbindelse (hvid diamant) i et klassediagram?",
                 """
                         En aggregeringsforbindelse (hvid diamant) i et klassediagram symboliserer en svagere "del-af" relation, hvor den indeholdende klasse kan have objekter af en anden klasse, men objekterne kan eksistere uafhængigt af den indeholdende klasse. Sletning af den indeholdende klasse sletter ikke nødvendigvis de relaterede objekter.
@@ -470,6 +518,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad betyder en afhængighedsforbindelse (stiplede pil) i et klassediagram?",
                 """
                         En afhængighedsforbindelse (stiplede pil) i et klassediagram betyder, at en klasse afhænger af en anden klasse for at fungere. Det betyder, at ændringer i den afhængige klasse kan påvirke den klasse, der er afhængig af den.
@@ -480,6 +529,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad betyder en generaliseringsforbindelse (Hvid pil) i et klassediagram?",
                 """
                         En generaliseringsforbindelse (Hvid pil) i et klassediagram betyder, at en klasse arver egenskaber og adfærd fra en overordnet klasse. Den overordnede klasse kaldes en superklasse, og den underordnede klasse kaldes en subklasse, der kan udvide eller ændre funktionaliteten fra superklassen.
@@ -490,6 +540,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er et sekvensdiagram (SD)? Og hvad er formålet med det?",
                 """
                         Et sekvensdiagram er et diagram, der viser interaktionen mellem enheder (f.eks. objekter, aktører eller systemkomponenter) over tid, og det beskriver rækkefølgen af beskeder, der sendes for at udføre en funktion. Sekvensdiagrammer er tæt på koden, da de illustrerer, hvordan funktioner og metoder kaldes mellem forskellige komponenter i systemet, hvilket gør det lettere at forstå og implementere den faktiske logik i koden.
@@ -500,6 +551,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er et system sekvens diagram (SSD)? Og hvad er formålet med det?",
                 """
                         Et system sekvensdiagram (SSD) viser interaktionen mellem aktører og systemet, hvor beskeder sendes til systemet for at udføre en funktion. Formålet er at beskrive systemets respons på eksterne input og handlingerne, der udføres i systemet. SSD viser ikke kode direkte, men illustrerer i stedet systemets funktionelle flow og beskedudveksling på et højere abstraktionsniveau.
@@ -510,6 +562,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad adskiller et SSD fra et SD?",
                 """
                         Et SSD (System Sekvens Diagram) viser interaktionen mellem aktører og systemet, mens et SD (Sekvensdiagram) viser interaktionen mellem objekter eller komponenter inden for systemet. SSD fokuserer på systemets eksterne grænse, mens SD beskriver intern kommunikation og rækkefølge af beskeder mellem objekter.
@@ -520,6 +573,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er formålet med en use case, og hvordan adskiller det sig fra andre metoder til kravspecificering?",
                 """
                         Formålet med en use case er at beskrive, hvordan en bruger (eller aktør) interagerer med systemet for at opnå et specifikt mål. Det adskiller sig fra andre metoder til kravspecificering ved at fokusere på brugerens perspektiv og de funktionelle krav, der opfyldes gennem systemets handlinger, i stedet for at fokusere på tekniske detaljer eller systemets indre struktur.
@@ -530,6 +584,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad består en use case af, og hvilke elementer er vigtige at inkludere?",
                 """
                         En use case består af en beskrivelse af, hvordan en aktør interagerer med et system for at opnå et mål. Vigtige elementer at inkludere er:
@@ -548,6 +603,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er en user story? Og hvad er formålet den?",
                 """
                         En user story er en kort, enkel beskrivelse af en funktionalitet set fra en brugers perspektiv. Den beskriver, hvad en bruger ønsker at opnå, og hvorfor det er vigtigt. 
@@ -565,6 +621,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er strukturen af en god user story, og hvordan sikrer man, at den er effektiv?",
                 """
                         Som en [type bruger], vil jeg [ønske/handling], så jeg kan [forventet resultat/fordel].
@@ -583,6 +640,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvordan adskiller user stories sig fra use cases, og hvornår bruger man det ene frem for det andet?",
                 """
                         User stories er kortere, mere enkle beskrivelser af funktionalitet set fra brugerens perspektiv, og de fokuserer på forretningsværdi. De bruges typisk i agile udviklingsmetoder som Scrum.
@@ -597,6 +655,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er formålet med GRASP-principperne, og hvordan understøtter de objektorienteret design?",
                 """
                         Der er 9 principper i GRASP, de er:
@@ -612,6 +671,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er formålet med Creator-mønsteret i GRASP og hvornår skal det bruges?",
                 """
                         Formålet med Creator-mønsteret i GRASP er at tildele ansvaret for at oprette objekter til den klasse, der har et tæt forhold til objektet, f.eks. ejer det, bruger det eller har ansvaret for det. Det skal bruges, når en klasse skal skabe objekter, og det er mest logisk, at den klasse, der bruger objektet, også skaber det, hvilket fremmer lav kobling og bedre ansvarstildeling.
@@ -622,6 +682,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er formålet med information expert?",
                 """
                         Formålet med Information Expert er at tildele ansvaret for en opgave til den klasse, der har den nødvendige information til at udføre opgaven. Dette sikrer høj samhørighed og lav kobling i designet.
@@ -632,6 +693,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er formålet med Controller-mønsteret?",
                 """
                         Formålet med Controller-mønsteret er at håndtere brugerinteraktioner ved at tildele ansvaret for systemoperationer til en specifik controller-klasse. Det sikrer en klar opdeling mellem brugergrænsefladen og den underliggende logik.
@@ -642,6 +704,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er formålet med Low coupling / High cohesion?",
                 """
                         Formålet med Low Coupling er at minimere afhængigheder mellem klasser for at gøre systemet mere fleksibelt og robust over for ændringer.
@@ -653,6 +716,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er formålet med Polymorphism-mønsteret?",
                 """
                         Formålet med Polymorphism-mønsteret er at lade forskellige objekter udføre samme operation på deres egen måde ved at uddelegere ansvaret til klasser, der implementerer et fælles interface eller nedarver fra samme superklasse. Det gør systemet fleksibelt og nemt at udvide.
@@ -665,6 +729,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er formålet med Pure Fabrication?",
                 """
                         Formålet med Pure Fabrication er at oprette en klasse, der ikke repræsenterer et naturligt objekt i systemet, men som hjælper med at løse tekniske problemer og forbedre designet ved at holde systemet organiseret, samtidig med at man opretholder lav kobling og høj kohæsion.
@@ -677,6 +742,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er MVC arkitektur? Og hvordan bruges det i et Spring boot projekt?",
                 """
                         MVC (Model-View-Controller) er en arkitektur, der opdeler applikationen i tre dele. Model repræsenterer data og forretningslogik, mens View håndterer brugergrænsefladen og præsentationen. Controller modtager brugerinput, opdaterer modellen og returnerer den passende visning.
@@ -689,6 +755,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er forskellen mellem UI og GUI?",
                 """
                         UI (User Interface) refererer generelt til grænsefladen, som brugeren interagerer med, uanset om det er grafisk eller tekstbaseret. GUI (Graphical User Interface) er en type UI, der bruger grafiske elementer som ikoner, knapper og billeder til at interagere med brugeren. Kort sagt er GUI en specifik form for UI.
@@ -699,6 +766,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er formålet med prototyping?",
                 """
                         Formålet med prototyping er at skabe en tidlig version af et system eller produkt for at visualisere ideer, teste funktionalitet og indsamle feedback fra brugere og interessenter. Det hjælper med at afklare krav, opdage problemer tidligt og forbedre designet, inden den endelige version udvikles. Prototyping gør det lettere at iterere og justere baseret på feedback.
@@ -709,6 +777,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvilke Golden Rules findes der? og hvad er formålet med disse?",
                 """
                         The Golden Rules for design er:
@@ -724,6 +793,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvilke Gestalt-love findes der? og hvad er formålet med disse?",
                 """
                         Gestalt-lovene for design er:
@@ -742,6 +812,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er forskellen mellem Blackbox, Whitebox og Greybox testmetoder?",
                 """
                         Blackbox testing fokuserer på at teste funktionaliteten uden at kende den interne struktur af systemet. Testeren kender ikke koden og tester kun input og output.
@@ -756,6 +827,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvilke fordele er der ved henholdsvist Blackbox- og Whitebox test?",
                 """
                         Fordele ved Blackbox-test: Testeren er ikke afhængig af intern viden om systemet, hvilket giver mulighed for at finde fejl i funktionaliteten set fra en brugers perspektiv. Det er effektivt til at teste systemets brugergrænseflade og eksterne funktioner.
@@ -768,6 +840,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er en Intergration test? og hvad er formålet med dette?",
                 """
                         En integrationstest tester, hvordan forskellige dele af et system arbejder sammen. Det kan være to moduler, der er lavet i forskellige programmeringssprog eller to systemer, der skal kommunikere med hinanden. Formålet er at sikre, at data flyder korrekt mellem disse dele, og at de fungerer som forventet sammen.
@@ -777,18 +850,20 @@ public class QuestionService {
 
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
-                        SU,
-                        "Hvad er en Acceptance test? og hvad er formålet med dette?",
-                        """
-                                En acceptancetest er en test, der bruges til at kontrollere, om et system eller en funktion opfylder de krav, der er sat af kunden eller slutbrugeren. Formålet med testen er at sikre, at systemet fungerer som forventet i en realistisk situation og er klar til at blive taget i brug. Et eksempel kunne være at teste, om en bruger kan oprette en konto, logge ind og gennemføre et køb på en e-handelsplatform, for at sikre at alle funktioner fungerer korrekt.
-                                """)
-                //Kan evt. indeholde et billede også
+                SU,
+                2,
+                "Hvad er en Acceptance test? og hvad er formålet med dette?",
+                """
+                        En acceptancetest er en test, der bruges til at kontrollere, om et system eller en funktion opfylder de krav, der er sat af kunden eller slutbrugeren. Formålet med testen er at sikre, at systemet fungerer som forventet i en realistisk situation og er klar til at blive taget i brug. Et eksempel kunne være at teste, om en bruger kan oprette en konto, logge ind og gennemføre et køb på en e-handelsplatform, for at sikre at alle funktioner fungerer korrekt.
+                        """)
+        //Kan evt. indeholde et billede også
         );
         count++;
 
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er en System test? og hvad er formålet med dette?",
                 """
                         En systemtest er en omfattende test, hvor hele systemet testes som én samlet enhed for at sikre, at alle komponenter fungerer korrekt sammen. Formålet er at kontrollere, at systemet opfylder både funktionelle og ikke-funktionelle krav, såsom ydeevne og sikkerhed. Systemtesten er ofte stor og lang, da den tester alle funktioner, workflows og integrationer for at sikre, at alt fungerer som forventet i et produktionsmiljø.
@@ -799,6 +874,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er Positiv og Negativ testning? Og hvad er formålet med disse?",
                 """
                         Positiv testning fokuserer på at teste systemet med gyldige input for at sikre, at det fungerer som forventet under normale forhold. Formålet er at bekræfte, at systemet håndterer de forventede input korrekt.
@@ -811,6 +887,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er FTR (Formal Technical Review)? Og hvad er formålet med dette?",
                 """
                         FTR (Formal Technical Review) er en formaliseret proces, hvor et team af eksperter gennemgår et teknisk produkt (som kode, design eller dokumentation) for at identificere fejl, mangler og forbedringsmuligheder. Gennemgangen er struktureret, og deltagerne følger en fastlagt proces for at sikre, at alle relevante aspekter bliver gennemgået. Formålet er at finde problemer tidligt i udviklingsforløbet, hvilket gør det lettere og billigere at rette fejl, samt at sikre, at produktet lever op til de ønskede standarder og krav.
@@ -821,6 +898,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er Mock objekter? og hvad er formålet med disse?",
                 """
                         Mock objekter er simulerede versioner af de rigtige objekter, som bruges i unit tests for at erstatte eksterne afhængigheder, som f.eks. databaser eller eksterne API'er. Formålet med mock objekter er at isolere den del af systemet, der testes, så man kun tester den specifikke funktionalitet, uden at det påvirkes af eksterne systemer eller ressourcer. Det hjælper med at sikre, at testen er præcis og fokuseret på den kode, der skal evalueres.
@@ -831,6 +909,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er Stub objekter/metode? og hvad er formålet med disse?",
                 """
                         Stub objekter/metode er en forenklet version af en metode, der bruges i tests til at simulere afhængigheder, som kan være for komplekse eller ikke implementeret endnu. Stubben returnerer et forudbestemt resultat, så man kan teste den oprindelige metode isoleret fra den komplekse funktionalitet, den normalt kalder. Formålet er at gøre det muligt at teste en metode uden at blive påvirket af eksterne, komplekse komponenter.
@@ -841,6 +920,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er forskellen på formel og uformel review?",
                 """
                         Formel review er en struktureret gennemgang, der følger en fast proces og ofte inkluderer dokumentation, møder og specifikke roller for deltagerne. Formålet er at identificere fejl og sikre kvalitet.
@@ -853,6 +933,7 @@ public class QuestionService {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
+                2,
                 "Hvad er et State machine diagram? og hvad er formålet med dette?",
                 """
                         
@@ -864,6 +945,7 @@ public class QuestionService {
 //Teknologi-----------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Teknologi,
+                2,
                 "Hvad er en JAR fil? Og hvad er formålet med den?",
                 """
                         En JAR-fil (Java ARchive) er en fil, der samler flere Java-klasser, metadata og ressourcefiler (som billeder eller tekstfiler) i én fil. Formålet med en JAR-fil er at gøre det nemmere at distribuere og køre Java-applikationer ved at pakke alle nødvendige filer i et enkelt arkiv.
@@ -874,6 +956,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Teknologi,
+                2,
                 "Hvad er fordelene ved at pakke en applikation i en JAR-fil fremfor at distribuere enkeltstående filer? ",
                 """
                         Fordelene ved at pakke en applikation i en JAR-fil fremfor at distribuere enkeltstående filer inkluderer:
@@ -889,6 +972,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Teknologi,
+                2,
                 "Hvordan opretter man en JAR-fil i Java? Hvilket værktøj kan man bruge til at lave en JAR-fil?",
                 """
                         Man kan oprette en JAR-fil i Java ved hjælp af Maven, som automatisk bygger JAR-filer baseret på projektets konfiguration i pom.xml-filen. Maven samler projektets Java-klasser og afhængigheder og pakker dem i en JAR-fil. Gradle er et alternativ, der også kan bruges til at oprette JAR-filer, men Maven er specielt populært til denne opgave.
@@ -899,6 +983,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Teknologi,
+                2,
                 "Hvordan kan man arbejde med Git og GitHub i et projekt?",
                 """
                         Man kan arbejde med Git og GitHub i et projekt ved at bruge Git til at versionere koden lokalt på sin maskine og GitHub til at opbevare og dele koden online. Først initialiserer man et Git-repository i projektmappen, laver ændringer, og bruger Git-kommandoer som commit, push, og pull til at synkronisere med GitHub. GitHub giver mulighed for at samarbejde med andre, oprette pull requests, og holde styr på ændringer i koden.
@@ -909,6 +994,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Teknologi,
+                2,
                 "Hvad er en Branch og hvordan arbejdes der med Branches?",
                 """
                         En branch i Git er en separat arbejdsgren, hvor man kan lave ændringer uden at påvirke hovedprojektet (typisk kaldet main eller master). Man arbejder med branches ved at oprette en ny branch for en specifik funktion eller opgave, foretage ændringer på den, og derefter merge (sammenflette) den tilbage til hovedbranchen, når arbejdet er færdigt. Dette gør det muligt at udvikle funktioner parallelt og sikre, at kodebasen forbliver stabil.
@@ -919,6 +1005,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Teknologi,
+                2,
                 "Hvad er Merging ift. Github?",
                 """
                         Merging i GitHub refererer til processen, hvor man kombinerer ændringer fra én branch med en anden. Når man arbejder på en feature branch og er færdig med arbejdet, kan man merge den tilbage til hovedbranchen (f.eks. main). Dette sikrer, at de ændringer, der er lavet i feature-branchen, bliver en del af projektets hovedkodebase. Merging kan gøres manuelt eller gennem en pull request, hvor teammedlemmer kan gennemgå ændringerne før integration.
@@ -929,6 +1016,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Teknologi,
+                2,
                 "Hvad er en Merge Konflikt og hvordan kan man løse det?",
                 """
                         En merge konflikt opstår, når Git ikke automatisk kan kombinere ændringer fra to forskellige branches, fordi de ændringer, der er lavet, påvirker samme del af en fil på forskellige måder. For at løse en merge konflikt, skal man manuelt gennemgå de berørte filer og beslutte, hvilke ændringer der skal bevares. Git markerer konfliktområderne i filerne, så man kan vælge den korrekte version og derefter committe de løste filer.
@@ -939,6 +1027,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Teknologi,
+                2,
                 "Hvilke typer Linux-distributioner understøttes på Azure? ",
                 """
                         Azure understøtter flere Linux-distributioner, herunder:
@@ -956,6 +1045,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Teknologi,
+                2,
                 "Hvad er forskellen mellem en \"on-premises\" Linux-server og en Azure Linux virtuel machine?",
                 """
                         En "on-premises" Linux-server er en fysisk server, der er placeret og administreret lokalt på en virksomheds fysiske placering (datacenter eller serverrum). Alle ressourcer som strøm, netværk og hardware vedligeholdelse er virksomhedens ansvar.
@@ -968,6 +1058,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Teknologi,
+                2,
                 "Hvilke fordele har Azure Linux-baserede løsninger fremfor Windows-baserede i deployment?  ",
                 """
                         Azure Linux-baserede løsninger tilbyder flere fordele over Windows, herunder lavere licensomkostninger, bedre fleksibilitet og tilpasning, samt nem adgang til open source-værktøjer. Linux er også ideelt til containerteknologier som Docker og Kubernetes, og det giver bedre ydeevne, skalerbarhed og sikkerhed for cloud-applikationer.
@@ -978,6 +1069,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Teknologi,
+                2,
                 "Hvilke fordele/ulemper kan Deployment give et projekt?",
                 """
                         Fordele ved deployment er, at det gør det lettere at opdatere og dele applikationen, samt at den kan skalere og tilgås af flere brugere.
@@ -990,6 +1082,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Teknologi,
+                2,
                 "Hvordan forbinder man en Azure database til et Spring boot projekt?",
                 """
                         For at forbinde en Azure database til et Spring Boot-projekt, skal du følge disse trin:
@@ -1006,6 +1099,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Teknologi,
+                2,
                 "Hvad er forskellen på en Mysql Database - localhost og på Azure?",
                 """
                         Forskellen mellem en MySQL-database på localhost og en MySQL-database på Azure ligger primært i placeringen og administrationen.
@@ -1022,6 +1116,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Teknologi,
+                2,
                 "Hvad er miljøvariabler set i forhold til et Spring projekt?",
                 """
                         I et Spring-projekt bruges miljøvariabler til at opbevare konfigurationsoplysninger, som kan tilpasses baseret på forskellige miljøer (f.eks. udvikling, test, produktion). Miljøvariabler bruges ofte til at gemme følsomme oplysninger som databasenavne, brugernavne, adgangskoder og API-nøgler, så disse ikke hardkodes i applikationen.
@@ -1034,6 +1129,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Teknologi,
+                2,
                 "Hvorfor er det godt at bruge miljøvariabler?",
                 """
                         Det er godt at bruge miljøvariabler, fordi de gør det muligt at opbevare konfigurationsdata uden at hardkode dem i koden. Det forbedrer sikkerheden (ved at skjule følsomme oplysninger), gør det lettere at skifte mellem forskellige miljøer (f.eks. udvikling, test, produktion), og forenkler vedligeholdelse, da ændringer kun kræver opdatering af variablerne, ikke koden.
@@ -1044,6 +1140,7 @@ public class QuestionService {
 //IT- og Forretningsforståelse:---------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 ITF,
+                2,
                 "Hvordan identificerer og klassificerer man interessenter i en interessentanalyse?",
                 """
                         I en interessentanalyse identificerer man interessenter ved at kortlægge alle personer, grupper eller organisationer, der påvirkes af eller har interesse i projektet. Dette kan omfatte både interne og eksterne parter som kunder, medarbejdere, leverandører og myndigheder.
@@ -1062,6 +1159,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 ITF,
+                2,
                 "Hvordan kan en interessentanalyse hjælpe med at sikre projektets succes?",
                 """
                         En interessentanalyse hjælper med at sikre projektets succes ved at identificere og forstå de personer eller grupper, der har interesse i projektet, og hvordan deres behov og forventninger kan påvirke det. Ved at kortlægge interessenternes indflydelse og interesse kan man tilpasse kommunikationen og involveringen af de vigtigste interessenter, hvilket reducerer risikoen for konflikter og sikrer, at projektet får den nødvendige støtte.
@@ -1074,6 +1172,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 ITF,
+                2,
                 "Hvilke strategier kan man anvende for at engagere forskellige typer interessenter?",
                 """
                         
@@ -1095,6 +1194,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 ITF,
+                2,
                 "Hvad er en risikoanalyse? Hvad er formålet? Og hvordan prioriteres risici?",
                 """
                         En risikoanalyse er en proces, hvor man identificerer, vurderer og prioriterer potentielle risici, der kan påvirke et projekt. Formålet med risikoanalysen er at forberede sig på mulige problemer, så man kan tage proaktive skridt til at reducere eller håndtere dem.
@@ -1107,6 +1207,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 ITF,
+                2,
                 "Hvordan kan man bruge en risikoanalyse til at minimere usikkerhed i et projekt?",
                 """
                         En risikoanalyse hjælper med at minimere usikkerhed i et projekt ved at identificere potentielle risici tidligt, vurdere deres sandsynlighed og konsekvenser, og derefter tage proaktive skridt for at håndtere dem. Ved at have en klar plan for, hvordan risici skal håndteres, kan man reducere uventede problemer og sikre, at projektet forløber mere forudsigeligt og kontrolleret.
@@ -1117,6 +1218,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 ITF,
+                2,
                 "Hvilke aspekter vurderes typisk i en feasibility-analyse, og hvordan bidrager de til beslutningstagning?",
                 """
                         Teknisk feasibility: Er de nødvendige teknologier og ressourcer tilgængelige?
@@ -1132,6 +1234,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 ITF,
+                2,
                 "Hvordan kan en feasibility-analyse hjælpe med at vurdere risikoen ved et projekt?",
                 """
                         En feasibility-analyse hjælper med at vurdere risikoen ved et projekt ved at identificere potentielle udfordringer og usikkerheder i forhold til tekniske, økonomiske, operationelle, juridiske og politiske faktorer. Ved at analysere disse områder kan man tidligt i projektet identificere risici, som kan påvirke projektets gennemførelse og succes, og dermed tage proaktive skridt til at mitigere dem.
@@ -1142,6 +1245,7 @@ public class QuestionService {
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 ITF,
+                2,
                 "Hvad er en SWOT-analyse?",
                 """
                         En SWOT-analyse er en strategisk metode, der bruges til at vurdere en organisations styrker, svagheder, muligheder og trusler. Formålet med analysen er at få et klart billede af både interne faktorer (styrker og svagheder) og eksterne faktorer (muligheder og trusler), som kan påvirke beslutningstagning og strategi. SWOT-analyse hjælper med at identificere områder, hvor organisationen kan udnytte sine styrker, forbedre svagheder, gribe muligheder og håndtere trusler.
