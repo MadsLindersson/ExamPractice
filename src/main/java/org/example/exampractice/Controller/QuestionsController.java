@@ -5,9 +5,7 @@ import org.example.exampractice.Service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class QuestionsController {
@@ -15,15 +13,29 @@ public class QuestionsController {
     @Autowired
     QuestionService qs;
 
-    @GetMapping("AllSubjects")
-    public String AllSubjects(Model model) {
-        model.addAttribute("question", qs.randomQuestionUsingParam("AlleFag"));
-        return "AllSubjectsPageSecondSemester";
+    @GetMapping("Menu/{semesterInt}")
+    public String Menu(@PathVariable int semesterInt, Model model) {
+        model.addAttribute("semesterInt", semesterInt);
+        return "Menu";
     }
 
-    @PostMapping("AllSubjectsAnswer")
-    public String AllSubjectsAnswer(Model model, @ModelAttribute Question question) {
+    @GetMapping("QuestionsPage/{subject}/{semesterInt}")
+    public String QuestionsPage(Model model, @PathVariable (required = false) String subject, @PathVariable int semesterInt) {
+
+        if(subject == null) {
+            subject = "AlleFag";
+        }
+
+        model.addAttribute("question", qs.randomQuestionUsingParam(subject));
+        model.addAttribute("semesterInt", semesterInt);
+        return "QuestionsPage";
+    }
+
+    @PostMapping("AnswerPage")
+    public String AnswerPage(Model model, @ModelAttribute Question question, @RequestParam String subjectString, @RequestParam int semesterInt) {
         model.addAttribute("question", question);
-        return "AllSubjectsAnswerPageSecondSemester";
+        model.addAttribute("subject", subjectString);
+        model.addAttribute("semesterInt", semesterInt);
+        return "AnswerPage";
     }
 }

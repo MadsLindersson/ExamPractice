@@ -18,7 +18,9 @@
 
     <p th:text="${question.question}"></p>
 
-    <form action="/AllSubjectsAnswer" method="post">
+    <form action="/AnswerPage" method="post">
+        <input type="hidden" name="subjectString" th:value="${subject}">
+        <input type="hidden" name="semesterInt" th:value="${semesterInt}">
         <input type="hidden" name="id" th:value="${question.getId()}">
         <input type="hidden" name="subject" th:value="${question.getSubject()}">
         <input type="hidden" name="semester" th:value="${question.getSemester()}">

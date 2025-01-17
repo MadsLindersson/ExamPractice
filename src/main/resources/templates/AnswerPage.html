@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AllSubjectsAnswer</title>
+    <title>AnswerPage</title>
     <link rel="stylesheet" href="/Styles.css">
     <link rel="stylesheet" href="/AllSubjectsAnswerPage.css">
     <link rel="stylesheet" href="/Fragments.css">
@@ -22,7 +22,7 @@
 
     <p style="margin-top: 7%" th:text="${question.answer}"></p>
 
-    <form action="AllSubjects" method="get">
+    <form th:action="@{/QuestionsPage/{subject}/{semesterInt}(subject=${subject}, semesterInt=${semesterInt})}" method="get">
         <button class="buttonSeSvar">Næste</button>
     </form>
 </div>

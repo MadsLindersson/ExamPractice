@@ -12,11 +12,11 @@
 <div th:replace="Fragments :: linkedInLinks"></div>
 
 <div class="MainDiv">
-  <a href="1.semester" class="MenuATag">
+  <a th:href="@{/QuestionsPage/{semesterInt}(semesterInt=${1})}" class="MenuATag">
     1. Semester
   </a>
 
-  <a href="2.semester" class="MenuATag">
+  <a th:href="@{/Menu/{semesterInt}(semesterInt=${2})}" class="MenuATag">
     2. Semester
   </a>
 

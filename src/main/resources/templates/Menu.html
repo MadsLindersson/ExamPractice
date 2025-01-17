@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Menu</title>
     <link rel="stylesheet" href="/Styles.css">
     <link rel="stylesheet" href="/HomePages.css">
     <link rel="stylesheet" href="/Fragments.css">
@@ -14,7 +14,7 @@
 <div th:replace="Fragments :: backButtonHome"></div>
 
 <div class="MainDiv">
-    <a href="AllSubjects" class="MenuATag">
+    <a th:href="@{/QuestionsPage/{subject}/{semesterInt}(subject=${'AlleFag'}, semesterInt=${semesterInt})}" class="MenuATag">
         Alle fag
     </a>
 
