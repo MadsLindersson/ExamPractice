@@ -10,6 +10,7 @@
     top: 0;
     transform: translateX(-50%);
     margin-top: 2%;
+    font-size: 1vw;
 }
 
 .h3SvarTitle{
@@ -18,4 +19,5 @@
     top: 20%;
     transform: translateX(-50%);
     margin-top: 2%;
+    font-size: 1vw;
 }

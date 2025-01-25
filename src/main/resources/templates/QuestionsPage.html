@@ -16,14 +16,14 @@
 <div th:if="${semesterInt==2}" th:replace="Fragments :: backButtonSecondSemester"></div>
 
 <div class="titleOnPageDiv">
-    <h1 class="h1Title" th:if="${semesterInt == 1}" th:text="'1. Semester'"></h1>
-    <h1 class="h1Title" th:if="${semesterInt == 2}" th:text="'2. Semester'"></h1>
+    <h1 th:if="${semesterInt == 1}" th:text="'1. Semester'"></h1>
+    <h1 th:if="${semesterInt == 2}" th:text="'2. Semester'"></h1>
 
-    <h2 class="h2Title" th:if="${subject == 'AlleFag'}" th:text="'Alle fag'"></h2>
-    <h2 class="h2Title" th:if="${subject == 'Programmering'}" th:text="'Programmering'"></h2>
-    <h2 class="h2Title" th:if="${subject == 'SU'}" th:text="'Systemudvikling'"></h2>
-    <h2 class="h2Title" th:if="${subject == 'Teknologi'}" th:text="'Teknologi'"></h2>
-    <h2 class="h2Title" th:if="${subject == 'ITF'}" th:text="'It & forretningsforståelse'"></h2>
+    <h2 th:if="${subject == 'AlleFag'}" th:text="'Alle fag'"></h2>
+    <h2 th:if="${subject == 'Programmering'}" th:text="'Programmering'"></h2>
+    <h2 th:if="${subject == 'SU'}" th:text="'Systemudvikling'"></h2>
+    <h2 th:if="${subject == 'Teknologi'}" th:text="'Teknologi'"></h2>
+    <h2 th:if="${subject == 'ITF'}" th:text="'It & forretningsforståelse'"></h2>
 </div>
 
 <div class="MainDiv" style="align-content: flex-start; justify-content: center">

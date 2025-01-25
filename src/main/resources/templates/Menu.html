@@ -14,10 +14,10 @@
 <div th:replace="Fragments :: backButtonHome"></div>
 
 <div class="titleOnPageDiv">
-    <h1 class="h1Title" th:if="${semesterInt == 1}" th:text="'1. Semester'"></h1>
-    <h1 class="h1Title" th:if="${semesterInt == 2}" th:text="'2. Semester'"></h1>
+    <h1 th:if="${semesterInt == 1}" th:text="'1. Semester'"></h1>
+    <h1 th:if="${semesterInt == 2}" th:text="'2. Semester'"></h1>
 
-    <h2 class="h2Title">
+    <h2>
         Vælg oplæsningsmetode
     </h2>
 </div>
