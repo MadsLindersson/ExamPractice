@@ -13,24 +13,33 @@
 
 <div th:replace="Fragments :: backButtonHome"></div>
 
+<div class="titleOnPageDiv">
+    <h1 class="h1Title" th:if="${semesterInt == 1}" th:text="'1. Semester'"></h1>
+    <h1 class="h1Title" th:if="${semesterInt == 2}" th:text="'2. Semester'"></h1>
+
+    <h2 class="h2Title">
+        Vælg oplæsningsmetode
+    </h2>
+</div>
+
 <div class="MainDiv">
-    <a th:href="@{/QuestionsPage/{subject}/{semesterInt}(subject=${'AlleFag'}, semesterInt=${semesterInt})}" class="MenuATag">
+    <a th:href="@{/QuestionsPage/{subject}/{semesterInt}(subject='AlleFag', semesterInt=${semesterInt})}" class="MenuATag">
         Alle fag
     </a>
 
-    <a href="#" class="MenuATag">
+    <a th:href="@{/QuestionsPage/{subject}/{semesterInt}(subject='Programmering', semesterInt=${semesterInt})}" class="MenuATag">
         Programmering
     </a>
 
-    <a href="#" class="MenuATag">
+    <a th:href="@{/QuestionsPage/{subject}/{semesterInt}(subject='SU', semesterInt=${semesterInt})}" class="MenuATag">
         Systemudvikling
     </a>
 
-    <a href="#" class="MenuATag">
+    <a th:href="@{/QuestionsPage/{subject}/{semesterInt}(subject='Teknologi', semesterInt=${semesterInt})}" class="MenuATag">
         Teknologi
     </a>
 
-    <a href="#" class="MenuATag">
+    <a th:href="@{/QuestionsPage/{subject}/{semesterInt}(subject='ITF', semesterInt=${semesterInt})}" class="MenuATag">
         It- Og Forretningsforståelse
     </a>
 

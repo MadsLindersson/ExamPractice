@@ -22,12 +22,9 @@ public class QuestionsController {
     @GetMapping("QuestionsPage/{subject}/{semesterInt}")
     public String QuestionsPage(Model model, @PathVariable (required = false) String subject, @PathVariable int semesterInt) {
 
-        if(subject == null) {
-            subject = "AlleFag";
-        }
-
-        model.addAttribute("question", qs.randomQuestionUsingParam(subject));
+        model.addAttribute("question", qs.randomQuestionUsingParam(subject, semesterInt));
         model.addAttribute("semesterInt", semesterInt);
+        model.addAttribute("subject", subject);
         return "QuestionsPage";
     }
 

@@ -11,8 +11,17 @@
 
 <div th:replace="Fragments :: linkedInLinks"></div>
 
+<div class="titleOnPageDiv">
+  <h1 class="h1Title">
+    Eksamensoplæsning
+  </h1>
+  <h2 class="h2Title">
+    Vælg semester
+  </h2>
+</div>
+
 <div class="MainDiv">
-  <a th:href="@{/QuestionsPage/{semesterInt}(semesterInt=${1})}" class="MenuATag">
+  <a th:href="@{/Menu/{semesterInt}(semesterInt=${1})}" class="MenuATag">
     1. Semester
   </a>
 

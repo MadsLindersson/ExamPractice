@@ -11,38 +11,64 @@ import static org.example.exampractice.Model.Question.Subjects.*;
 @Service
 public class QuestionService {
 
-    public Question randomQuestionUsingParam (String subject)   {
+    public Question randomQuestionUsingParam (String subject, int semesterInt)   {
 
         return switch (subject) {
             case "AlleFag" -> {
-                int randomIndexAllSubjects = (int) (Math.random() * makeListOfQuestions().size());
-                yield makeListOfQuestions().get(randomIndexAllSubjects);
+                List<Question> questions = fetchListOfQuestionsBySubject("AlleFag", semesterInt);
+                int randomIndexAllSubjects = (int) (Math.random() * questions.size());
+                yield questions.get(randomIndexAllSubjects);
             }
             case "Programmering" -> {
-                int randomIndexProgramming = (int) (Math.random() * fetchListOfQuestionsBySubject(Programmering).size());
-                yield makeListOfQuestions().get(randomIndexProgramming);
+                List<Question> questions = fetchListOfQuestionsBySubject("Programmering", semesterInt);
+                int randomIndexProgramming = (int) (Math.random() * questions.size());
+                yield questions.get(randomIndexProgramming);
             }
             case "SU" -> {
-                int randomIndexSU = (int) (Math.random() * fetchListOfQuestionsBySubject(SU).size());
-                yield makeListOfQuestions().get(randomIndexSU);
+                List<Question> questions = fetchListOfQuestionsBySubject("SU", semesterInt);
+                int randomIndexSU = (int) (Math.random() * fetchListOfQuestionsBySubject("SU", semesterInt).size());
+                yield questions.get(randomIndexSU);
             }
             case "Teknologi" -> {
-                int randomIndexTech = (int) (Math.random() * fetchListOfQuestionsBySubject(Teknologi).size());
-                yield makeListOfQuestions().get(randomIndexTech);
+                List<Question> questions = fetchListOfQuestionsBySubject("Teknologi", semesterInt);
+                int randomIndexTech = (int) (Math.random() * fetchListOfQuestionsBySubject("Teknologi", semesterInt).size());
+                yield questions.get(randomIndexTech);
             }
             case "ITF" -> {
-                int randomIndexITF = (int) (Math.random() * fetchListOfQuestionsBySubject(ITF).size());
-                yield makeListOfQuestions().get(randomIndexITF);
+                List<Question> questions = fetchListOfQuestionsBySubject("ITF", semesterInt);
+                int randomIndexITF = (int) (Math.random() * fetchListOfQuestionsBySubject("ITF", semesterInt).size());
+                yield questions.get(randomIndexITF);
             }
             default -> new Question(1, null,1, "", "");
         };
     }
 
-    public List<Question> fetchListOfQuestionsBySubject (Question.Subjects subject) {
+    public List<Question> fetchListOfQuestionsBySubject (String subject, int semesterInt) {
         List<Question> questions = new ArrayList<>();
-        for(Question element : makeListOfQuestions()) {
-            if(element.getSubject().equals(subject)) {
-                questions.add(element);
+
+        if(subject.equals("AlleFag") && semesterInt == 1) {
+            for (Question element : makeListOfQuestions()) {
+                if (element.getSemester() == 1) {
+                    questions.add(element);
+                }
+            }
+        } else if(subject.equals("AlleFag") && semesterInt == 2) {
+                for (Question element : makeListOfQuestions()) {
+                    if (element.getSemester() == 2) {
+                        questions.add(element);
+                    }
+                }
+        } else if (semesterInt == 1) {
+            for (Question element : makeListOfQuestions()) {
+                if (element.getSemester() == 1 && element.getSubject().toString().equals(subject)) {
+                    questions.add(element);
+                }
+            }
+        } else if (semesterInt == 2) {
+            for (Question element : makeListOfQuestions()) {
+                if (element.getSemester() == 1 || element.getSemester() == 2 && element.getSubject().toString().equals(subject)) {
+                    questions.add(element);
+                }
             }
         }
         return questions;
@@ -68,7 +94,7 @@ public class QuestionService {
         questions.add(new Question(count,
                 Programmering,
                 2,
-                "<b>Hvad er forskellen på en LinkedList og en ArrayList?</b>",
+                "Hvad er forskellen på en LinkedList og en ArrayList?",
                 """
                         En LinkedList bruger noder til at lagre data, hvor hver node indeholder en reference til næste (og eventuelt forrige) node. Det gør indsættelse og sletning hurtigere midt i listen, men adgang til elementer langsom.
                         
@@ -225,7 +251,7 @@ public class QuestionService {
         questions.add(new Question(count,
                 Programmering,
                 2,
-                "DDL (Data Definition Language) er en del af SQL, der bruges til at definere og ændre strukturen af databaser og tabeller. DDL-kommandoer omfatter CREATE, ALTER, DROP, og TRUNCATE, som bruges til at oprette, ændre, slette eller rydde tabeller og andre databaseobjekter.",
+                "Hvad er DDL (Data Definition Language?)",
                 """
                         DDL (Data Definition Language) er en del af SQL, der bruges til at definere og ændre strukturen af databaser og tabeller. DDL-kommandoer omfatter CREATE, ALTER, DROP, og TRUNCATE, som bruges til at oprette, ændre, slette eller rydde tabeller og andre databaseobjekter.
                         """)
