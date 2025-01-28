@@ -74,6 +74,28 @@ public class QuestionService {
         return questions;
     }
 
+    public List<Question> fetchListOfAllQuestionsBasedOnSemester (int semesterInt) {
+        List<Question> questions = new ArrayList<>();
+
+        switch (semesterInt)    {
+            case 1:
+                for(Question element : makeListOfQuestions()) {
+                    if (element.getSemester() == 1) {
+                        questions.add(element);
+                    }
+                }
+                break;
+            case 2:
+                for(Question element : makeListOfQuestions()) {
+                    if (element.getSemester() == 1 || element.getSemester() == 2) {
+                        questions.add(element);
+                    }
+                }
+        }
+
+        return questions;
+    }
+
     public List<Question> makeListOfQuestions()   {
         List<Question> questions = new ArrayList<Question>();
 

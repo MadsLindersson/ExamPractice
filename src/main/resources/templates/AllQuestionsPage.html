@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Questions page</title>
+    <link rel="stylesheet" href="/Styles.css">
+    <link rel="stylesheet" href="/AllQuestionsPage.css">
+    <link rel="stylesheet" href="/Fragments.css">
+</head>
+
+<body class="AllQuestionsBody">
+
+<div th:replace="Fragments :: linkedInLinks"></div>
+
+<div th:if="${semesterInt==1}" th:replace="Fragments :: backButtonFirstSemester"></div>
+
+<div th:if="${semesterInt==2}" th:replace="Fragments :: backButtonSecondSemester"></div>
+
+<div class="titleOnPageDiv">
+    <h1 th:if="${semesterInt == 1}" th:text="'1. Semester'"></h1>
+    <h1 th:if="${semesterInt == 2}" th:text="'2. Semester'"></h1>
+
+    <h2> Alle spørgsmål </h2>
+</div>
+
+<div class="QuestionsDivWrapper">
+    <div class="QuestionsDiv">
+        <h3 style="align-self: center;">Programmering</h3>
+
+        <div th:each="question : ${listOfQuestions}">
+            <div th:if="${question.subject.toString() == 'Programmering'}">
+                <a href="#" class="question-link-styled " th:text="${question.question}"
+                   th:attr="data-answer=${question.answer}"></a>
+
+
+                <div class="answer-popup" style="display: none;">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="QuestionsDivWrapper">
+    <div class="QuestionsDiv">
+        <h3 style="align-self: center;">Systemudvikling</h3>
+
+        <div th:each="question : ${listOfQuestions}">
+            <div th:if="${question.subject.toString() == 'SU'}">
+                <a href="#" class="question-link-styled" th:text="${question.question}"
+                   th:attr="data-answer=${question.answer}"></a>
+
+
+                <div class="answer-popup" style="display: none;">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="QuestionsDivWrapper">
+    <div class="QuestionsDiv">
+        <h3 style="align-self: center;">Teknologi</h3>
+
+        <div th:each="question : ${listOfQuestions}">
+            <div th:if="${question.subject.toString() == 'Teknologi'}">
+                <a href="#" class="question-link-styled" th:text="${question.question}"
+                   th:attr="data-answer=${question.answer}"></a>
+
+
+                <div class="answer-popup" style="display: none;">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="QuestionsDivWrapper">
+    <div class="QuestionsDiv">
+        <h3 style="align-self: center;">It & Forretningsforståelse</h3>
+
+        <div th:each="question : ${listOfQuestions}">
+            <div th:if="${question.subject.toString() == 'ITF'}">
+                <a href="#" class="question-link-styled" th:text="${question.question}"
+                   th:attr="data-answer=${question.answer}"></a>
+
+
+                <div class="answer-popup" style="display: none;">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.question-link-styled').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+
+
+            let answerPopup = link.nextElementSibling;
+            let answerText = link.getAttribute('data-answer');
+
+
+            let popupText = answerPopup.querySelector('p');
+            popupText.textContent = answerText;
+
+
+            if (answerPopup.style.display === 'none' || answerPopup.style.display === '') {
+                answerPopup.style.display = 'block';
+            } else {
+                answerPopup.style.display = 'none';
+            }
+        });
+    });
+
+
+
+
+
+</script>
+</body>
+</html>

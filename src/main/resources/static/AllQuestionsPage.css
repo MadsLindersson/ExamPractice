@@ -1,0 +1,112 @@
+.AllQuestionsBody{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.QuestionsDivWrapper {
+    position: relative;
+    width: 20%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 20%;
+    box-sizing: border-box;
+}
+
+.QuestionsDiv {
+    display: flex;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+.QuestionsDiv h3 {
+    position: sticky;
+    top: 0;
+    background-color: rgb(47, 54, 64);
+    z-index: 2;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    color: #EAEAEA;
+    font-weight: bold;
+    width: 100%;
+}
+
+.QuestionsDivWrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, transparent, #80d5cb, transparent) top,
+    linear-gradient(to bottom, transparent, #80d5cb, transparent) right,
+    linear-gradient(to right, transparent, #80d5cb, transparent) bottom,
+    linear-gradient(to bottom, #80d5cb, transparent, transparent) left;
+    background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.question-link-styled {
+    margin: 2%;
+    padding: 5px 15px;
+    background-color: rgba(47, 54, 64, 0.72); /* Dark background with opacity */
+    color: rgba(234, 234, 234, 0.96); /* Light text color */
+    border-radius: 5px;
+    font-size: 1vw;
+    text-decoration: none; /* No underline */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    display: inline-block; /* Ensures the background color applies to the entire area of the link */
+}
+
+.question-link-styled:hover,
+.question-link-styled:focus {
+    background-color: #80d5cb; /* Light cyan color when hovered */
+    color: white; /* White text color on hover */
+    transform: scale(1.05); /* Slightly enlarges the link */
+}
+
+.question-link-styled:active {
+    background-color: rgba(47, 54, 64, 0.8); /* Darker background when the link is clicked */
+}
+
+
+.answer-popup {
+    display: none;
+    background-color: rgba(47, 54, 64, 0.85); /* Darker background with opacity for the popup */
+    color: rgba(234, 234, 234, 0.96); /* Light text color */
+    padding: 15px;
+    border-radius: 8px; /* Slightly more rounded corners for a different feel */
+    font-size: 1.1vw; /* Slightly larger text for better readability */
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for display changes */
+    width: fit-content; /* Make the popup width fit its content */
+    max-width: 90%; /* Prevent it from becoming too wide */
+}
+
+.answer-popup p {
+    margin: 0; /* Remove unnecessary margin */
+}
+
+.answer-popup.show {
+    display: block; /* Show the popup when it gets the "show" class */
+    transform: translateY(10px); /* Add slight animation for the popup (optional) */
+}
+
+
+
+
+

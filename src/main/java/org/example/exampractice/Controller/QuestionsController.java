@@ -35,4 +35,12 @@ public class QuestionsController {
         model.addAttribute("semesterInt", semesterInt);
         return "AnswerPage";
     }
+
+    @GetMapping("AllQuestionsPage/{semesterInt}")
+    public String AllQuestionsPage(Model model, @PathVariable int semesterInt) {
+
+        model.addAttribute("listOfQuestions", qs.fetchListOfAllQuestionsBasedOnSemester(semesterInt));
+        model.addAttribute("semesterInt", semesterInt);
+        return "AllQuestionsPage";
+    }
 }
