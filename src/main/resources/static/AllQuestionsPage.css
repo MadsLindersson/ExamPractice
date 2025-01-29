@@ -18,7 +18,6 @@
 .QuestionsDiv {
     display: flex;
     align-content: space-evenly;
-    justify-content: space-evenly;
     flex-direction: column;
     width: 100%;
     height: 100%;
