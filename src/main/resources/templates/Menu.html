@@ -22,7 +22,7 @@
     </h2>
 </div>
 
-<div class="MainDiv">
+<div th:if="${semesterInt == 2}" class="MainDiv">
     <a th:href="@{/QuestionsPage/{subject}/{semesterInt}(subject='AlleFag', semesterInt=${semesterInt})}" class="MenuATag">
         Alle fag
     </a>
@@ -41,6 +41,17 @@
 
     <a th:href="@{/QuestionsPage/{subject}/{semesterInt}(subject='ITF', semesterInt=${semesterInt})}" class="MenuATag">
         It- Og Forretningsforståelse
+    </a>
+
+    <a th:href="@{/AllQuestionsPage/{semesterInt}(semesterInt=${semesterInt})}" class="MenuATag">
+        Se alle spørgsmål
+    </a>
+
+</div>
+
+<div th:if="${semesterInt == 1}" class="MainDiv">
+    <a th:href="@{/QuestionsPage/{subject}/{semesterInt}(subject='Programmering', semesterInt=${semesterInt})}" class="MenuATag">
+        Programmering
     </a>
 
     <a th:href="@{/AllQuestionsPage/{semesterInt}(semesterInt=${semesterInt})}" class="MenuATag">

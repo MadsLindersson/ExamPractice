@@ -41,7 +41,7 @@
     </div>
 </div>
 
-<div class="QuestionsDivWrapper">
+<div th:if="${semesterInt == 2}" class="QuestionsDivWrapper">
     <div class="QuestionsDiv">
         <h3 style="align-self: center;">Systemudvikling</h3>
 
@@ -59,7 +59,7 @@
     </div>
 </div>
 
-<div class="QuestionsDivWrapper">
+<div th:if="${semesterInt == 2}" class="QuestionsDivWrapper">
     <div class="QuestionsDiv">
         <h3 style="align-self: center;">Teknologi</h3>
 
@@ -77,7 +77,7 @@
     </div>
 </div>
 
-<div class="QuestionsDivWrapper">
+<div th:if="${semesterInt == 2}" class="QuestionsDivWrapper">
     <div class="QuestionsDiv">
         <h3 style="align-self: center;">It & Forretningsforståelse</h3>
 
@@ -116,10 +116,6 @@
             }
         });
     });
-
-
-
-
 
 </script>
 </body>
