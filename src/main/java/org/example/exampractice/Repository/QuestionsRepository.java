@@ -234,9 +234,17 @@ public class QuestionsRepository {
         questions.add(new Question(count,
                 Programmering,
                 1,
-                "",
+                "Hvad er en escape sequence? Og hvad er formålet med den?",
                 """
+                        En escape sequence er en kombination af tegn, der starter med en backslash (\\), og bruges til at repræsentere specialtegn i en streng.
                         
+                        Formål:
+                        Escape-sekvenser gør det muligt at inkludere tegn, der ellers ville være vanskelige at skrive direkte, f.eks.:
+                        
+                        \\n (ny linje)
+                        \\t (tabulator)
+                        \\" (anførselstegn i en streng)
+                        \\\\ (backslash)
                         """)
         );
         count++;
@@ -245,9 +253,511 @@ public class QuestionsRepository {
         questions.add(new Question(count,
                 Programmering,
                 1,
-                "",
+                "Hvad betyder precedence?",
+                """
+                        Precedence bestemmer rækkefølgen, hvori operationer udføres. Her er nogle vigtige operatorer i rækkefølge fra høj til lav precedence:
+                        
+                        Parenteser: ( )
+                        Unære operatorer: ++, --, !
+                        Multiplikation og division: *, /, %
+                        Addition og subtraktion: +, -
+                        Sammenligning: <, >, <=, >=
+                        Lighedsoperatorer: ==, !=
+                        Logisk OG: &&
+                        Logisk ELLER: ||
+                        Tildeling: =, +=, -=, *=, /=
+                        Højere precedence betyder, at operationen udføres før dem med lavere precedence, medmindre parenteser ændrer rækkefølgen.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er et parameter? (ift. metoder)",
+                """
+                        En parameter er en variabel, der gives som input til en metode for at påvirke dens funktion.
+                        
+                        Når en metode kaldes, kan den modtage værdier (argumenter), som matches med parametrene.
+                        
+                        Formål: Parametre gør metoder fleksible, så de kan udføre beregninger eller handlinger baseret på forskellig input.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad vil det sige at 'parameter overføre'?",
+                """
+                        Parameteroverførsel betyder at sende værdier (argumenter) til en metode gennem dens parametre.
+                        
+                        Der er to hovedtyper:
+                        
+                        Pass-by-value (værdi) – Metoden får en kopi af værdien (bruges til primitive typer i Java).
+                        Pass-by-reference (reference) – Metoden får en reference til det oprindelige objekt (bruges til objekter i Java).
+                        I Java overføres primitive typer ved værdi, mens objekter overføres ved reference til værdien (dvs. referencen kopieres, men objektet ændres, hvis metoden modificerer det).
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er en retur værdi?",
+                """
+                        En returværdi er den værdi, en metode sender tilbage efter udførelse.
+                        
+                        Formål: Gør det muligt at bruge metodens resultat i videre beregninger.
+                        
+                        Metodens returtype bestemmer, hvilken type værdi den kan returnere (f.eks. int, double, String). Metoder uden returværdi har void som returtype.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad betyder det at 'overloade' en metode eller konstruktør?",
+                """
+                        At overloade en metode eller konstruktør betyder at definere flere versioner af den samme metode eller konstruktør med samme navn, men med forskellige parameterlister (forskellige antal eller typer af parametre).
+                        
+                        Formålet er at gøre koden mere fleksibel og genanvendelig, så den samme metode kan håndtere forskellige typer input uden at ændre navnet.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad betyder 'static'?",
+                """
+                        static betyder, at en variable eller metode tilhører klassen i stedet for et specifikt objekt. Det kan bruges uden at oprette et objekt, og det er delt af alle objekter af klassen.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er en fencepost-fejl, og hvordan kan man undgå den i programmering?",
+                """
+                        En fencepost-fejl opstår, når du glemmer at starte eller slutte med det rigtige punkt, som fx et komma. Tænk på en liste med tal: 1, 2, 3, 4, 5. Hvis du laver en løkke, der skal tilføje kommaer mellem tallene, vil du komme til at tilføje et komma efter det sidste tal (fx 1, 2, 3, 4, 5,). For at undgå denne fejl, skal du starte med et tal og så begynde at tilføje kommaer inde i løkken – ikke før. Det betyder, at du undgår at ende med et ekstra komma til sidst.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er et sentinel loop?",
+                """
+                        Et sentinel loop er en løkke, der fortsætter, indtil den møder en bestemt værdi (kaldet sentinelværdien), som stopper løkken. Det bruges typisk i while- eller do-while-loops for at afslutte en løkke, når en bestemt betingelse er opfyldt, som f.eks. når brugeren indtaster "0" for at afslutte.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er boolean zen?",
+                """
+                        Boolean Zen handler om at undgå redundans, især når du arbejder med boolske værdier. Det betyder at skrive kode på en enkel måde, f.eks. at undgå at tjekke, om en værdi er true eller false, når det allerede er implicit i betingelsen. Det gør koden lettere at læse og mere effektiv.
+                        
+                        Ikke boolean zen: if(isTrue == true)
+                        Boolean zen:      if(isTrue)
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er et Scanner objekt?",
+                """
+                        Et Scanner-objekt bruges til at læse input fra brugeren i Java. Det gør det muligt at hente data, som f.eks. tekst eller tal, fra tastaturet eller en fil.
+                        
+                        Scanner scanner = new Scanner(System.in);
+                        Scanner scanner = new Scanner(new File("filnavn.txt"));
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er en line og en token? (ifb. med Scanner object)",
+                """
+                        En line er en hel linje af tekst, der læses på én gang, mens en token er et enkelt ord eller en værdi, der opdeles af mellemrum eller andre separatorer. Typisk læser man først en linje med nextLine(), og derefter bruger man en ny Scanner til at læse tokens fra den linje med next().
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er et PrintStream objekt?",
+                """
+                        Et PrintStream-objekt bruges i Java til at sende output, som f.eks. tekst, til en destination som en fil eller konsol. Det giver metoder som print() og println() til at skrive data.
+                        
+                        Man kan oprette et PrintStream-objekt for at skrive til en fil eller en anden output-strøm, ved at angive den ønskede destination, som en fil.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er exceptions?",
+                """
+                        Exceptions i Java er fejl, der sker, mens programmet kører, og som kan stoppe programmet. Når en exception opstår, kan programmet håndtere den med try-catch-blokke.
+                        
+                        Hvis en metode kan forårsage en fejl, kan den bruge throws til at fortælle, at den kan kaste en exception, som skal håndteres andre steder.
+                        
+                        Exceptions bruges til at vise problemer, som f.eks. at dele med nul eller åbne en fil, der ikke findes. Du kan også lave dine egne exceptions for at håndtere specifikke fejl.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er et objekts 'state' og 'behavior'?",
+                """
+                        Et objekts state er de data, det gemmer (f.eks. værdier af variabler), mens behavior er de handlinger, objektet kan udføre (f.eks. metoder). State beskriver, hvad objektet "er", og behavior beskriver, hvad objektet "gør".
+                        
+                        Eksempel: En radio kan være et objekt. Dens state kunne være ting som den nuværende volumen og frekvens, som radioen gemmer. Dens behavior kunne være handlinger som at tænde/slukke, ændre volumen eller skifte station.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad bruges keyword 'this' til?",
+                """
+                        "this" bruges til at referere til det aktuelle objekt, som metoden eller konstruktøren arbejder med. Det hjælper med at adskille objektets variabler fra metoder eller parametre, hvis de har samme navn.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er nedarv? Og hvad er formålet med dette?",
+                """
+                        Nedarvning betyder, at en subklasse kan arve egenskaber og metoder fra en superklasse. Formålet er at genbruge kode, så den nye subklasse får funktionalitet fra superklassen uden at skulle skrive den samme kode igen. Dette gør det nemmere at udvide og vedligeholde programmet.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad betyder det at override en metode eller konstruktør?",
                 """
                         
+                        At override en metode eller konstruktør betyder, at en subklasse skriver sin egen version af en metode eller konstruktør, som allerede findes i superklassen. Metoderne og konstruktørerne i subklassen skal have samme navn som dem i superklassen. Det bruges til at ændre, hvordan metoden eller konstruktøren fungerer i subklassen, så den kan tilpasses subklassens behov.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er et array?",
+                """
+                        Et array er en statisk liste, der indeholder værdier af samme type. Denne liste er indekseret, hvilket betyder, at man kan tilgå elementerne ved at bruge deres tilhørende indeks. I et array starter indekseringen altid fra 0, så det første element i arrayet har indeks 0, det næste har indeks 1, og så videre. Et array har en fast størrelse, som bestemmes ved oprettelsen og kan ikke ændres senere.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er en ArrayList?",
+                """
+                        En ArrayList er en dynamisk liste i Java, der automatisk ændrer størrelse, når elementer tilføjes eller fjernes. Den gemmer elementer af samme type og tilbyder metoder som add(), remove(), og get(). Når et element fjernes, bliver listen automatisk rykket sammen, så der ikke opstår huller. Dette gør ArrayList fleksibel, da den håndterer både størrelseændring og omarrangering af elementer automatisk, i modsætning til et statisk array, der har en fast størrelse.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er en wrapper klasse?",
+                """
+                        En wrapper klasse i Java er en klasse, der indpakker primitive datatyper som objekter. Hver primitiv type har en tilsvarende wrapper klasse, f.eks. Integer for int og Character for char. Wrapper klasser gør det muligt at bruge primitive typer i objektsamlinger som ArrayList og tilbyder nyttige metoder som konvertering og matematiske operationer.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er Comparable interface? Og hvad er en CompareTo() metode?",
+                """
+                        Comparable interface i Java gør det muligt at sammenligne objekter af en klasse, så de kan sorteres. Klassen implementerer Comparable og definerer en compareTo() metode for at bestemme rækkefølgen af objekterne.
+                        
+                        compareTo() metode bruges til at sammenligne to objekter. Den returnerer:
+                        
+                        Et negativt tal, hvis objektet er mindre.
+                        0, hvis objekterne er lige.
+                        Et positivt tal, hvis objektet er større.
+                        
+                        For at sortere en liste, der implementerer Comparable, bruger man Collections.sort();
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er relational operators?",
+                """
+                        Relational operators i Java bruges til at sammenligne to værdier. De returnerer en boolean værdi (true eller false). De mest almindelige er:
+                        
+                        == (lig med)
+                        != (ikke lig med)
+                        < (mindre end)
+                        > (større end)
+                        <= (mindre end eller lig med)
+                        >= (større end eller lig med)
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er logical operators?",
+                """
+                        Logical operators i Java bruges til at kombinere eller ændre betingelser. De mest almindelige er:
+                        
+                        && (logisk AND): Returnerer true, hvis begge betingelser er true.
+                        || (logisk OR): Returnerer true, hvis mindst én betingelse er true.
+                        ! (logisk NOT): Ændrer en betingelse, dvs. returnerer true hvis betingelsen er false, og vice versa.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er en cumulative sum?",
+                """
+                        En cumulative sum (eller kumulativ sum) er en løbende sum af værdier, hvor hver værdi i rækken tilføjes til den forrige sum. Det betyder, at hver sum er den samlede værdi af alle tidligere tal plus det aktuelle tal.
+                        
+                        Der bruges += til at lægge et tal til en eksisterende værdi.
+                        
+                        Der kan også bruges *= og /=, de vil henholdsvis multiplicere og dividere.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er konstanter? Og hvad er formålet med disse?",
+                """
+                        Konstanter er værdier, der ikke kan ændres, efter de er blevet tildelt. I Java defineres de med final keywordet. Formålet med konstanter er at sikre, at en værdi forbliver konstant gennem hele programmet. Et typisk eksempel er moms-satsen, som ikke ændres i løbet af programmet.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er pseudo kode? Og hvad er formålet med dette?",
+                """
+                        Pseudo kode er en uformel beskrivelse af et program eller en algoritme, skrevet på et letforståeligt sprog, der ligner programmering, men uden at følge syntaksen i et bestemt programmeringssprog. Formålet med pseudo kode er at planlægge og beskrive logikken i et program på en enkel og læsbar måde, før man skriver den faktiske kode. Det hjælper med at forstå algoritmen og strukturen, uden at fokusere på detaljer i syntaks.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er en switch?",
+                """
+                        En switch i Java er en kontrolstruktur, der bruges til at vælge mellem flere mulige værdier baseret på en variabel. Den sammenligner en værdi med flere cases og udfører den kode, der matcher. Man bruger typisk en switch, når tjekket bliver for stort eller kompliceret til at håndtere effektivt med if-statements. Hver case afsluttes normalt med en break for at forhindre, at programmet fortsætter til næste case. Hvis ingen case matcher, kan en default case bruges.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er printf? Og hvad er formålet med denne?",
+                """
+                        printf er en metode i Java, der bruges til at formatere og udskrive tekst til konsollen. Formålet med printf er at give kontrol over, hvordan data vises, f.eks. ved at specificere antal decimaler, bredden på tekst og justering.
+                        
+                        Eksempel:
+                        double price = 12.3456;
+                        System.out.printf("Prisen er: %.2f\\n", price);  // Udskriver: Prisen er: 12.35
+                        I dette eksempel bruges %.2f til at vise prisen med to decimaler.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er multiple dimensional arrays?",
+                """
+                        Multiple dimensional arrays er arrays, der indeholder andre arrays som elementer. De bruges til at repræsentere data i flere dimensioner, som f.eks. en matrix (2D array) eller en 3D struktur.
+                        
+                        Eksempel på et 2D array:
+                        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+                        Her er matrix et 2D array med 3 rækker og 3 kolonner.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad betyder det at traversere?",
+                """
+                        At traversere betyder at gennemløbe eller iterere gennem elementerne i en datastruktur, som f.eks. et array eller en liste. Formålet er ofte at tilgå, ændre eller behandle hvert element i strukturen.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er Math biblioteket?",
+                """
+                        Math biblioteket i Java indeholder en række matematiske funktioner og konstanter, som gør det nemt at udføre beregninger som f.eks. trigonometri, logaritmer, absolutte værdier og mere.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er Math.random?",
+                """
+                        Math.random() i Java er en metode, der genererer et tilfældigt decimaltal mellem 0 (inklusive) og 1 (eksklusive). Det bruges ofte til at skabe tilfældige værdier i programmer.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er fields?",
+                """
+                        Fields i Java er variabler, der er defineret inden for en klasse. De bruges til at gemme data eller tilstand for objekterne af klassen. Fields kan være af forskellige datatyper og kan have forskellige adgangsniveauer (f.eks. private, public).
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er en konstruktør?",
+                """
+                        En konstruktør i Java er en speciel metode, der bruges til at initialisere objekter. Den har samme navn som klassen og kaldes automatisk, når et objekt oprettes. Konstruktøren bruges til at tildele værdier til felterne i objektet.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvordan kan man have flere konstruktører i en klasse?",
+                """
+                        
+                        Man kan have flere konstruktører i en klasse ved at bruge konstruktør overloading. Det betyder, at man definerer flere konstruktører med samme navn, men med forskellige parameterlister (forskellige antal eller typer af parametre). Dette gør det muligt at initialisere objekter på forskellige måder.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er en toString() metode?",
+                """
+                        En toString() metode i Java er en metode, der returnerer en strengrepræsentation af et objekt. Den bruges ofte til at få en menneskelig læsbar beskrivelse af objektet. Hvis den ikke er overskrevet i en klasse, returnerer den som standard objektets hukommelsesadresse.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er encapsulation?",
+                """
+                        Encapsulation i Java er en objektorienteret princip, der betyder at skjule objektets interne data og kun give adgang til dem gennem offentlige metoder (getters og setters). Det beskytter objektets tilstand og sikrer, at data kun kan ændres på en kontrolleret måde.
+                        (private/protected)
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er et interface?",
+                """
+                        Et interface i Java er en kontrakt, der definerer metoder, som en klasse skal implementere. Det indeholder kun metodernes signaturer (ingen implementering), og en klasse, der implementerer et interface, skal definere alle de metoder, der er angivet i interfacet.
+                        Der bruges keyword 'Implements' for at bruge et interface.
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er polymorphism?",
+                """
+                        Polymorphism i Java betyder, at en metode eller et objekt kan have flere former. Det gør det muligt at bruge den samme metode med forskellige typer objekter, og metoden kan opføre sig forskelligt afhængigt af objektet, der kalder den. Polymorphism gør koden mere fleksibel og genbrugelig, da du kan arbejde med objekter af forskellige klasser på en ensartet måde.
+                        
+                        Eksempel: En metode, der kaldes på et objekt, kan give forskellig adfærd afhængigt af om objektet er af type Hund eller Kat.
                         """)
         );
         count++;
