@@ -36,7 +36,7 @@ public class QuestionsRepository {
                 1,
                 "Hvad er en LinkedList?",
                 """
-                        En LinkedList er en datalstruktur, hvor elementerne er organiseret som noder, der hver indeholder en værdi og en reference (peger) til den næste node i listen. Denne struktur gør det nemt at indsætte og fjerne elementer i midten af listen, men adgang til elementer er langsommere end andre datastrukture som f.eks. ArrayList.
+                        En LinkedList er en datastruktur, hvor elementerne er organiseret som noder, der hver indeholder en værdi og en reference (peger) til den næste node i listen. Denne struktur gør det nemt at indsætte og fjerne elementer i midten af listen, men adgang til elementer er langsommere end andre datastrukture som f.eks. ArrayList.
                         """)
         );
         count++;
@@ -761,7 +761,171 @@ public class QuestionsRepository {
                         """)
         );
         count++;
-
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvordan definerer man en metode i Java, og hvad er de nødvendige komponenter i en metodedeklaration?",
+                """
+                        I Java defineres en metode med følgende komponenter:
+                        
+                        Returtype: Angiver typen af værdi, som metoden returnerer (f.eks. int, String, void hvis den ikke returnerer noget).
+                        Metodenavn: Navnet på metoden.
+                        Parametre: En liste af variabler, der er adskilt med kommaer, som metoden kan modtage. Hver parameter har en type og et navn. (Kan være by value og by reference)
+                        Metodekrop: De klammer {}, der indeholder kroppen af metoden, hvor koden udføres.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "",
+                """
+                        
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "",
+                """
+                        
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "",
+                """
+                        
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "",
+                """
+                        
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "",
+                """
+                        
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "",
+                """
+                        
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "",
+                """
+                        
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "",
+                """
+                        
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "",
+                """
+                        
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "",
+                """
+                        
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "",
+                """
+                        
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "",
+                """
+                        
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "",
+                """
+                        
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "",
+                """
+                        
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "",
+                """
+                        
+                        """)
+        );
+        count++;
 //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 Programmering,
@@ -915,6 +1079,17 @@ public class QuestionsRepository {
         questions.add(new Question(count,
                 Programmering,
                 2,
+                "Hvem skulle du tage og oprette forbindelse med på LinkedIn?",
+                """
+                        Jens Kristian Ruben Hansen & Mads Lindersson. (Links nede i højre hjørne)
+                        """)
+        );
+        count++;
+
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                2,
                 "Hvad bruges @GetMapping til i Spring?",
                 """
                         @GetMapping i Spring bruges til at oprette en metode i en controller, som håndterer HTTP GET-anmodninger. Det betyder, at når en bruger f.eks. besøger en bestemt URL, vil metoden blive kaldt og returnere data eller en webside til brugeren.
@@ -960,6 +1135,46 @@ public class QuestionsRepository {
                 "Hvad gør @Autowired i Spring?",
                 """
                         @Autowired i Spring bruges til automatisk at injicere afhængigheder i en klasse. Det betyder, at Spring automatisk finder og indsætter de nødvendige objekter (f.eks. services eller repositories) i en klasse, uden at du selv behøver at skabe dem manuelt. Det hjælper med at gøre koden mere fleksibel og lettere at vedligeholde.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                2,
+                "Hvad er en HashMap, og hvornår bør man bruge den?",
+                """
+                        En HashMap er en datastruktur i Java, der lagrer nøgle-værdi-par, hvor hver nøgle er unik, og værdien er tilknyttet en specifik nøgle. Den giver hurtig adgang til værdier baseret på nøgler.
+                        
+                        Man bør bruge en HashMap, når man har brug for effektiv lagring og opsætning af data, hvor man hurtigt skal kunne hente, indsætte eller opdatere værdier ved hjælp af nøgler.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                2,
+                "Hvordan fungerer 'final' keyword i Java i relation til variabler, metoder og klasser?",
+                """
+                        I Java bruges 'final' som et keyword til at angive, at noget ikke kan ændres:
+                        
+                        Variabler: Når en variabel er deklareret som final, kan dens værdi ikke ændres efter initialisering.
+                        Metoder: Når en metode er deklareret som final, kan den ikke blive overskrevet i en underklasse.
+                        Klasser: Når en klasse er deklareret som final, kan den ikke blive nedarvet eller udvidet af andre klasser.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                2,
+                "Hvordan fungerer Dependency Injection i Spring, og hvorfor er det nyttigt?",
+                """
+                        Dependency Injection (DI) i Spring er en teknik, hvor Spring containeren automatisk injicerer afhængigheder (f.eks. objekter eller services) i en klasse, i stedet for at klassen selv skal oprette eller finde disse afhængigheder.
+                        
+                        En almindelig måde at implementere DI i Spring er ved hjælp af @Autowired-annotation, som automatisk injicerer den nødvendige afhængighed i et felt, en konstruktor eller en setter-metode.
+                        
+                        DI gør det lettere at teste, vedligeholde og udvide applikationen, da det løsner koblingen mellem komponenterne og fremmer genbrug af objekter. Det gør koden mere fleksibel og modulær.
                         """)
         );
         count++;
@@ -1013,7 +1228,7 @@ public class QuestionsRepository {
                 """
                         Primary key: En unik identifikator for hver række i en tabel. Der kan kun være én primær nøgle per tabel.
                         
-                        En foreign key er en kolonne (eller et sæt af kolonner), der bruges til at etablere en relation mellem to tabeller, og den kan referere til hvilken som helst unik nøgle (primær eller kandidatnøgle (Ofte primær nøgle)) i den relaterede tabel. 
+                        En foreign key er en kolonne (eller et sæt af kolonner), der bruges til at etablere en relation mellem to tabeller, og den kan referere til hvilken som helst unik nøgle (primær eller kandidatnøgle (Ofte primær nøgle)) i den relaterede tabel.
                         
                         Foreign key: En kolonne, der refererer til primærnøglen i en anden tabel, og bruges til at etablere relationer mellem tabeller.""")
         );
@@ -1038,10 +1253,10 @@ public class QuestionsRepository {
                 2,
                 "Hvad er et klassediagram, og hvad er dets formål?",
                 """
-                Et klassediagram er en type diagram i UML (Unified Modeling Language), der bruges til at modellere strukturen af et system. 
+                Et klassediagram er en type diagram i UML (Unified Modeling Language), der bruges til at modellere strukturen af et system.
                 Det viser klasser, deres attributter, metoder og relationer (som arv, association og afhængigheder) mellem klasserne.
         
-                Formålet med et klassediagram er at visualisere systemets arkitektur og struktur. Det hjælper med at forstå og designe, 
+                Formålet med et klassediagram er at visualisere systemets arkitektur og struktur. Det hjælper med at forstå og designe,
                 hvordan forskellige objekter i systemet interagerer, hvilket gør det nemmere at planlægge, udvikle og vedligeholde koden.
                 """
         ));
@@ -1172,7 +1387,7 @@ public class QuestionsRepository {
                 2,
                 "Hvad er en user story? Og hvad er formålet den?",
                 """
-                        En user story er en kort, enkel beskrivelse af en funktionalitet set fra en brugers perspektiv. Den beskriver, hvad en bruger ønsker at opnå, og hvorfor det er vigtigt. 
+                        En user story er en kort, enkel beskrivelse af en funktionalitet set fra en brugers perspektiv. Den beskriver, hvad en bruger ønsker at opnå, og hvorfor det er vigtigt.
                         Den er ofte skrevet på følgende måde:
                         
                         Som en [type bruger], vil jeg [ønske/handling], så jeg kan [forventet resultat/fordel].
@@ -1508,6 +1723,389 @@ public class QuestionsRepository {
         );
         count++;
 
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad er en domænemodel? Og hvad er formålet med den?",
+                """
+                        En domænemodel viser domænet – altså de vigtigste begreber og deres relationer i den virkelige verden, som systemet skal understøtte. Den fokuserer på, hvad systemet skal håndtere, men ikke hvordan systemet er bygget indeni.
+                        
+                        Den viser typisk ting som brugere, produkter, ordrer osv., men ikke tekniske detaljer som databaser eller kode.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad er et aktivitetsdiagram, og hvad bruges det til?",
+                """
+                        Et aktivitetsdiagram viser, hvordan en proces eller arbejdsgang forløber, step for step. Det bruges til at visualisere, hvordan aktiviteterne hænger sammen og hvilken rækkefølge de udføres i.
+                        
+                        Det bruges til at forstå og kommunikere, hvordan en opgave eller proces skal udføres i systemet.
+                        Læs uddybet: https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad er forskellen mellem vandfaldsmodellen og iterativ udvikling?",
+                """
+                        Vandfaldsmodellen er en lineær proces, hvor man gennemfører et skridt ad gangen, og hvert skridt skal være færdigt, før man går videre.
+                        
+                        Iterativ udvikling arbejder i små dele, hvor man kan lave ændringer og forbedringer efterhånden som arbejdet skrider frem.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad er en backlog i Scrum, og hvordan administreres den?",
+                """
+                        En backlog i Scrum er en prioriteret liste over opgaver, funktioner og krav, der skal udvikles i et projekt.
+                        
+                        Den administreres ved, at Product Owner løbende opdaterer og prioriterer opgaverne baseret på forretningsværdi og behov. Under Sprint Planning udvælges de vigtigste opgaver til det kommende sprint, hvorefter teamet arbejder på dem.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad er en Product Owner, og hvad er deres rolle i Scrum?",
+                """
+                        En Product Owner i Scrum er ansvarlig for at maksimere værdien af produktet og sikre, at udviklingsteamet arbejder på de rigtige opgaver.
+                        
+                        Deres rolle inkluderer at definere og prioritere Product Backlog, kommunikere med interessenter og sikre, at teamet forstår kravene og målene.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad er en sprint retrospective, og hvorfor er den vigtig?",
+                """
+                        En Sprint Retrospective er et møde efter et sprint, hvor teamet evaluerer, hvad der gik godt, hvad der kan forbedres, og hvilke tiltag der skal implementeres.
+                        
+                        Den er vigtig, fordi den fremmer løbende forbedringer, øger samarbejdet og optimerer arbejdsprocesserne i Scrum-teamet.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad er en burn-down chart, og hvordan bruges den i agile udvikling?",
+                """
+                        En Burn-Down Chart er en graf, der viser det resterende arbejde i et sprint eller projekt over tid.
+                        
+                        Den bruges i agil udvikling til at visualisere fremskridt, vurdere velocity (teamets gennemførelseshastighed) og sammenligne med capacity (tilgængelige ressourcer). Data fra burn-down chartet hjælper med at tilpasse planning points i fremtidige sprints for bedre estimering og planlægning.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad er en MVP (Minimum Viable Product), og hvordan bruges den i agil udvikling?",
+                """
+                        En MVP (Minimum Viable Product) er den simpleste version af et produkt med nok funktionalitet til at skabe værdi og teste markedet.
+                        
+                        Den bruges i agil udvikling til hurtigt at indsamle feedback, validere idéer og iterere produktet baseret på reelle brugerbehov, før der investeres i fuld udvikling.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvordan adskiller integrationstests sig fra unit tests?",
+                """
+                        Integrationstests tester, hvordan forskellige komponenter eller systemer arbejder sammen, mens unit tests tester individuelle enheder af kode isoleret.
+                        
+                        Integrationstests sikrer, at moduler fungerer korrekt sammen, mens unit tests fokuserer på små dele af koden for at fange fejl tidligt.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad er Scrum, og hvad er formålet med det?",
+                """
+                        Scrum er en agil udviklingsmetode, der fokuserer på iterative processer, selvorganiserende teams og kontinuerlig forbedring. Den involverer elementerne: Product Backlog, sprint backlog.\s
+                        Møderne: Sprint Planning, Daily Stand-ups, Sprint Review, Sprint Retrospective.
+                        Rollerne: Scrum Master, Product Owner, og Development Team.
+                        
+                        Formålet er at levere værdi hurtigt, øge fleksibilitet og forbedre samarbejde gennem korte udviklingscyklusser kaldet sprints.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad er en Sprint, og hvor længe kan et sprint varer?",
+                """
+                        En Sprint er en kort, tidsafgrænset udviklingscyklus i Scrum, hvor et team arbejder på at levere et færdigt, potentielt leverbart produkt.
+                        
+                        Et sprint varer typisk 2-4 uger, men længden kan tilpasses afhængigt af projektets behov.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad er en Sprint Backlog, og hvordan adskiller den sig fra en Product Backlog?",
+                """
+                        En Sprint Backlog er en liste over opgaver og funktioner, som teamet skal arbejde på i løbet af et sprint, baseret på de højeste prioriterede elementer fra Product Backlog.
+                        
+                        Forskellen er, at Product Backlog indeholder alle opgaver for produktet, mens Sprint Backlog kun indeholder de opgaver, der er valgt til det aktuelle sprint.
+                        
+                        Der må ikke ændres på sprint backlog items, kun product backlog items.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvilke roller findes der i Scrum, og hvad er deres ansvarsområder?",
+                """
+                        Product Owner: Ansvarlig for at definere og prioritere Product Backlog og sikre, at teamet arbejder på de vigtigste opgaver for at maksimere produktets værdi.
+                        Scrum Master: Ansvarlig for at støtte teamet, fjerne forhindringer og sikre, at Scrum-processen følges korrekt.
+                        Development Team: Ansvarlig for at udvikle og levere produktet, selvorganisere sig og samarbejde om at nå sprintmålene.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad er forskellen mellem en Scrum Master og en Product Owner?",
+                """
+                        Scrum Master er ansvarlig for at sikre, at Scrum-processen følges, fjerne forhindringer for teamet og støtte teamet i at forbedre deres arbejdsmetoder.
+                        Product Owner er ansvarlig for at definere og prioritere Product Backlog, kommunikere med interessenter og sikre, at teamet arbejder på de opgaver, der skaber mest værdi.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad er Scrum Masters vigtigste ansvar?",
+                """
+                        Scrum Masters vigtigste ansvar er at sikre, at Scrum-processen følges korrekt, støtte teamet i at arbejde effektivt, fjerne forhindringer, og facilitere Scrum-møder som Sprint Planning, Daily Stand-ups, Sprint Review og Sprint Retrospective.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad er en Sprint Planning, og hvad er dens formål?",
+                """
+                        Sprint Planning er et møde, hvor teamet planlægger, hvad der skal arbejdes på i det kommende sprint.
+                        
+                        Formålet er at definere sprintmålene, vælge de opgaver fra Product Backlog, der skal arbejdes på, og planlægge, hvordan teamet skal nå målene inden for sprintens tidsramme.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad er Daily Scrum, og hvad er de tre primære spørgsmål, der besvares under mødet?",
+                """
+                        Daily Scrum er et kort, dagligt møde, hvor teamet koordinerer og opdaterer hinanden om fremdrift.
+                        
+                        De tre primære spørgsmål, der besvares under mødet, er:
+                        
+                        Hvad har jeg gjort siden sidst?
+                        Hvad vil jeg arbejde på i dag?
+                        Er der nogen hindringer, der forhindrer mig i at nå mit mål?
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad er en Sprint Review, og hvad sker der under dette møde?",
+                """
+                        Sprint Review er et møde, hvor teamet præsenterer det færdige arbejde fra sprintet for interessenter og får feedback.
+                        
+                        Under mødet gennemgår teamet, hvad der blev opnået i sprintet, diskuterer eventuelle ændringer eller forbedringer og tilpasser Product Backlog baseret på feedbacken.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad gør man hvis teamet er færdig med alle sprint backlog items en dag før sprintet er slut?",
+                """
+                        Hvis teamet er færdigt med alle Sprint Backlog-elementer en dag før sprintet er slut, bør de reflektere over, hvorfor sprintet blev fejlestimeret. Denne ekstra tid kan bruges til at analysere og lære af estimaterne, så teamet kan forbedre deres evne til at estimere arbejdet i fremtidige sprints og dermed opnå mere præcise planer og bedre forudsigelser.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad er Definition of Done (DoD), og hvorfor er det vigtigt?",
+                """
+                        Definition of Done (DoD) er en klar og fælles forståelse i teamet af, hvornår en opgave eller funktion er fuldstændig færdig og klar til at blive betragtet som afsluttet.
+                        
+                        DoD er vigtigt, fordi det sikrer, at der ikke er nogen tvivl om kvaliteten af arbejdet, og at alle opgaver opfylder de nødvendige krav, før de betragtes som færdige og leveres.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvordan estimerer man opgaver i Scrum?",
+                """
+                        I Scrum estimeres opgaver ofte ved hjælp af Story Points, som er en relativ måling af opgavens kompleksitet, størrelse og arbejdsindsats.
+                        
+                        Teamet diskuterer og vurderer opgaverne sammen, og hver opgave tildeles en pointværdi baseret på tidligere erfaringer og teamets fælles vurdering. Det kan også bruges Planning Poker som metode til at nå frem til konsensus om estimaterne. Selvom User Stories og Story Points ofte bruges i Scrum, er de ikke en del af den officielle Scrum-ramme.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad er Capacity & Velocity i Scrum, og hvordan beregnes volocity?",
+                """
+                        Capacity i Scrum refererer til den mængde arbejde, et team kan påtage sig i et sprint baseret på tilgængelige ressourcer og arbejdstid.
+                        
+                        Velocity er den gennemsnitlige mængde arbejde, et team kan færdiggøre pr. sprint, og beregnes ved at summere de Story Points, som teamet har afsluttet i et sprint. Denne værdi bruges til at hjælpe med at estimere, hvor meget arbejde teamet realistisk kan håndtere i fremtidige sprints.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Må sprint backlog items ændres under et sprint? Forklar",
+                """
+                        Sprint Backlog-items bør ikke ændres under et sprint, da det kan forstyrre sprintets mål og fokus. Ændringer i Sprint Backlog bør kun finde sted i yderste tilfælde, når det er absolut nødvendigt, og kun efter en grundig diskussion og godkendelse fra både Scrum Master og Product Owner.
+                        
+                        Når et sprint er startet, er det vigtigt, at teamet arbejder på de opgaver, der er blevet defineret i sprintplanlægningen, for at sikre stabilitet og undgå at afvige fra den oprindelige plan.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Må product backlog items ændres under et sprint? Forklar",
+                """
+                        Ja, Product Backlog-items kan ændres under et sprint, da Product Backlog er et dynamisk dokument, der kan opdateres løbende baseret på feedback, ændrede prioriteter eller nye oplysninger.
+                        
+                        Dog bør ændringerne i Product Backlog ikke påvirke det nuværende sprint, da det kan forstyrre teamets fokus. Product Owner er ansvarlig for at opdatere Product Backlog og sikre, at de nye eller ændrede items prioriteres korrekt for fremtidige sprints.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad gør Scrum emperisk?",
+                """
+                        Scrum er empirisk, fordi det bygger på erfaring, observation og kontinuerlig læring. I stedet for at forudsige alle løsninger på forhånd, fokuserer Scrum på at lære fra konkrete erfaringer og justere kursen baseret på den viden, der opnås gennem Sprint Reviews, Retrospectives, og den løbende feedback fra teamet og interessenter.
+                        
+                        Denne empiriske tilgang gør det muligt for teamet at tilpasse sig ændringer og forbedre arbejdsmetoder i realtid.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad er forskellen mellem en relationel og en ikke-relationel database?",
+                """
+                        Forskellen mellem en relationel og en ikke-relationel database ligger i, hvordan data organiseres og lagres:
+                        
+                        Relationel database organiserer data i tabeller, der er forbundet via relationer (f.eks. ved hjælp af primære og fremmede nøgler). Den bruger strukturerede forespørgsler som SQL til at manipulere data.
+                        
+                        Ikke-relationel database (NoSQL) lagrer data i mere fleksible formater som dokumenter, nøgleværdi-par eller grafer, og den er ikke afhængig af tabeller eller relationer. Den er ofte mere skalerbar og kan håndtere ustrukturerede data.
+                        
+                        Relationelle databaser er bedst til struktureret data med faste relationer, mens ikke-relationelle databaser er velegnede til ustruktureret eller hurtigt skiftende data.
+                        """)
+        );
+        count++;
+
+        //--------------------------------------------------------------------------------------------------------------------//
+
+        questions.add(new Question(count,
+                SU,
+                2,
+                "Hvad betyder det at normalisere en database?",
+                """
+                        At normalisere en database betyder at organisere data i tabeller på en måde, der reducerer redundans og afhængigheder for at sikre dataintegritet. Dette gøres ved at opdele store tabeller i mindre, mere fokuserede tabeller og oprette relationer mellem dem.
+                        
+                        Normalisering hjælper med at undgå datadubletter og sikrer, at opdateringer, indsættelser og sletninger af data kan udføres uden at skabe inkonsistens. Processen omfatter ofte flere "normalformer" (1NF, 2NF, 3NF), der specificerer de krav, data skal opfylde for at være korrekt normaliseret.
+                        """)
+        );
+        count++;
+
+
 //Teknologi-----------------------------------------------------------------------------------------------------------//
 
         questions.add(new Question(count,
@@ -1819,6 +2417,108 @@ public class QuestionsRepository {
                         """)
         );
         count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Teknologi,
+                2,
+                "Hvad er forskellen på en primær nøgle og en fremmed nøgle i en database?",
+                """
+                        En primær nøgle (primary key) er en unik identifikator for en række i en tabel. En fremmed nøgle (foreign key) er en kolonne (eller flere) i en tabel, der refererer til en unik nøgle i en anden tabel – ofte en primær nøgle, men det kan også være en unik nøgle (unique key).
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Teknologi,
+                2,
+                "Hvad er forskellen mellem en INNER JOIN og en LEFT JOIN i SQL?",
+                """
+                        En INNER JOIN returnerer kun de rækker, hvor der er match i begge tabeller. En LEFT JOIN returnerer alle rækker fra den venstre tabel og de matchende rækker fra den højre tabel – hvis der ikke er et match, vises NULL-værdier for den højre tabel.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Teknologi,
+                2,
+                "Hvad er forskellen mellem GROUP BY og HAVING i SQL?",
+                """
+                        GROUP BY grupperer rækker baseret på en eller flere kolonner for at aggregere data, mens HAVING bruges til at filtrere grupper efter en betingelse – ligesom WHERE, men for grupperede data.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Teknologi,
+                2,
+                "Hvad betyder det at commit ændringer i Git?",
+                """
+                        At committe ændringer i Git betyder at gemme en snapshot af de aktuelle filer i repositoryens historik. Et commit indeholder en beskrivelse af ændringerne og fungerer som et gendannelsespunkt. Commit ændrer dog kun det lokale repository – ændringerne skal pushes for at blive synlige i et eksternt repository.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Teknologi,
+                2,
+                "Hvordan fungerer versionkontrol med Git, og hvorfor er det vigtigt i et udviklingsprojekt?",
+                """
+                        Versionskontrol med Git sporer ændringer i filer over tid, så udviklere kan arbejde sammen, gendanne tidligere versioner og håndtere forskellige kodestadier. Det er vigtigt i et udviklingsprojekt, fordi det sikrer samarbejde, minimerer fejl, muliggør eksperimentering uden risiko og giver en historik over ændringer.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Teknologi,
+                2,
+                "Hvordan fungerer en \"pull request\" i GitHub?",
+                """
+                        En pull request i GitHub bruges til at foreslå og diskutere ændringer, før de flettes ind i hovedprojektet. Udvikleren opretter en pull request fra en gren, og andre kan derefter gennemgå, kommentere og eventuelt godkende ændringerne, før de bliver integreret i hovedgrenen.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Teknologi,
+                2,
+                "Hvad er Infrastructure as a Service (IaaS) og Platform as a Service (PaaS)?",
+                """
+                        Infrastructure as a Service (IaaS) leverer grundlæggende IT-infrastruktur som virtuelle maskiner, netværk og lagring, hvor brugeren selv administrerer operativsystemer og applikationer.
+                        
+                        Platform as a Service (PaaS) tilbyder en fuldt administreret udviklingsplatform med værktøjer, databaser og hosting, så udviklere kan fokusere på kode uden at håndtere infrastruktur.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Teknologi,
+                2,
+                "Hvad er forskellen mellem en virtuel maskine og en container?",
+                """
+                        En virtuel maskine (VM) emulerer en hel computer med eget operativsystem og hardwarevirtualisering, hvilket gør den tungere og mere ressourcekrævende.
+                        
+                        En container deler værtsoperativsystemets kerne og kører isolerede applikationer med egne afhængigheder, hvilket gør den lettere, hurtigere og mere effektiv end en VM.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Teknologi,
+                2,
+                "Hvad betyder det at deploy en applikation, og hvilke steps er involveret?",
+                """
+                        At deploye en applikation betyder at gøre den tilgængelig for brugere ved at udrulle den til en server eller cloud-miljø.
+                        
+                        Typiske steps inkluderer:
+                        
+                        Bygning – kompiler og pak applikationen.
+                        Test – verificer, at den fungerer korrekt.
+                        Deployment – udrul til server eller cloud.
+                        Overvågning – tjek for fejl og ydeevne.
+                        Vedligeholdelse – opdater og fejlret løbende.
+                        """)
+        );
+        count++;
 
 //IT- og Forretningsforståelse:---------------------------------------------------------------------------------------//
 
@@ -1944,6 +2644,95 @@ public class QuestionsRepository {
                 "Hvad er en SWOT-analyse?",
                 """
                         En SWOT-analyse er en strategisk metode, der bruges til at vurdere en organisations styrker, svagheder, muligheder og trusler. Formålet med analysen er at få et klart billede af både interne faktorer (styrker og svagheder) og eksterne faktorer (muligheder og trusler), som kan påvirke beslutningstagning og strategi. SWOT-analyse hjælper med at identificere områder, hvor organisationen kan udnytte sine styrker, forbedre svagheder, gribe muligheder og håndtere trusler.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                ITF,
+                2,
+                "Hvad er forskellen mellem interne og eksterne interessenter i en interessentanalyse?",
+                """
+                        Interne interessenter er personer eller grupper indenfor organisationen, som påvirkes af eller har indflydelse på projektet, som medarbejdere, ledelse og ejere.
+                        
+                        Eksterne interessenter er personer eller grupper udenfor organisationen, som også kan påvirkes af projektet eller have indflydelse på det, som kunder, leverandører og myndigheder.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                ITF,
+                2,
+                "Hvordan kan en interessentanalyse bidrage til effektiv kommunikation i et projekt?",
+                """
+                        En interessentanalyse hjælper med at identificere og forstå de vigtigste interessenter, deres behov og forventninger. Dette gør det muligt at tilpasse kommunikationen til de forskellige interessenters niveau og interesser, hvilket sikrer, at alle får den rette information på det rette tidspunkt, og dermed fremmer effektiv kommunikation i projektet.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                ITF,
+                2,
+                "Hvad er forskellen på en proaktiv og en reaktiv tilgang til risikoanalyse?",
+                """
+                        En proaktiv tilgang til risikoanalyse fokuserer på at identificere og håndtere risici, før de opstår, ved at planlægge og implementere foranstaltninger på forhånd.
+                        
+                        En reaktiv tilgang reagerer på risici, når de allerede er opstået, ved at håndtere dem og finde løsninger, efter de har påvirket projektet.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                ITF,
+                2,
+                "Hvilke faktorer bør tages i betragtning i en økonomisk feasibility-analyse?",
+                """
+                        I en økonomisk feasibility-analyse bør faktorer som omkostninger, potentielle indtægter, return on investment (ROI), finansieringsmuligheder, risici, tidsramme og de økonomiske fordele ved projektet overvejes for at vurdere, om projektet er økonomisk bæredygtigt.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                ITF,
+                2,
+                "Hvordan kan en teknologisk feasibility-analyse bidrage til projektets succes?",
+                """
+                        En teknologisk feasibility-analyse vurderer, om de nødvendige teknologier og ressourcer er tilgængelige og egnede til projektet. Den kan bidrage til projektets succes ved at identificere teknologiske udfordringer tidligt, sikre, at de rette værktøjer og platforme anvendes, og minimere risikoen for teknologiske problemer undervejs.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                ITF,
+                2,
+                "Hvad betyder de enkelte elementer i en SWOT-analyse (styrker, svagheder, muligheder og trusler)?",
+                """
+                        I en SWOT-analyse betyder:
+                        
+                        Styrker (Strengths): De interne faktorer, der giver organisationen en fordel i forhold til konkurrenter.
+                        Svagheder (Weaknesses): De interne faktorer, der hæmmer organisationens præstationer eller konkurrenceevne.
+                        Muligheder (Opportunities): Eksterne faktorer, som organisationen kan udnytte til vækst eller forbedring.
+                        Trusler (Threats): Eksterne faktorer, der kan påvirke organisationens succes negativt.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                ITF,
+                2,
+                "Hvordan kan en SWOT-analyse hjælpe med at vurdere virksomhedens position i markedet?",
+                """
+                        En SWOT-analyse hjælper med at vurdere virksomhedens position i markedet ved at identificere interne styrker og svagheder samt eksterne muligheder og trusler. Dette giver et klart billede af virksomhedens konkurrenceevne, områder, hvor den kan forbedre sig, og hvordan den kan udnytte muligheder eller håndtere trusler i markedet.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                ITF,
+                2,
+                "Hvordan kan en juridisk feasibility-analyse hjælpe med at identificere potentielle lovgivningsmæssige udfordringer for projektet?",
+                """
+                        En juridisk feasibility-analyse vurderer, om projektet overholder gældende love og regler. Den hjælper med at identificere potentielle lovgivningsmæssige udfordringer ved at analysere juridiske krav, licenser, kontrakter, ophavsretter og andre relevante reguleringer, som kan påvirke projektets gennemførelse og succes.
                         """)
         );
         count++;
