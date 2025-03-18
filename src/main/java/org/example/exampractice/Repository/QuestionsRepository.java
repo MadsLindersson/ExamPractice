@@ -780,9 +780,9 @@ public class QuestionsRepository {
         questions.add(new Question(count,
                 Programmering,
                 1,
-                "",
+                "Hvad er formålet med return-typen i en metode, og hvordan defineres den?",
                 """
-                        
+                        Return-typen i en metode angiver, hvilken datatype metoden returnerer efter udførelse. Den defineres før metodens navn og sikrer, at metoden leverer en værdi af den forventede type. Hvis metoden ikke returnerer noget, anvendes void.
                         """)
         );
         count++;
@@ -790,9 +790,9 @@ public class QuestionsRepository {
         questions.add(new Question(count,
                 Programmering,
                 1,
-                "",
+                "Hvad er forskellen på en if-statement og en switch-statement?",
                 """
-                        
+                        En if-statement evaluerer betingelser én ad gangen og bruges til komplekse eller dynamiske logiske udtryk. En switch-statement sammenligner én variabel med faste værdier og er mere effektiv ved mange specifikke cases.
                         """)
         );
         count++;
@@ -800,9 +800,9 @@ public class QuestionsRepository {
         questions.add(new Question(count,
                 Programmering,
                 1,
-                "",
+                "Hvad er et break-statement, og hvordan bruges det i et loop?",
                 """
-                        
+                        Et break-statement stopper et loop med det samme og bruges typisk til at afbryde en gentagelse, når en bestemt betingelse er opfyldt.
                         """)
         );
         count++;
@@ -810,9 +810,9 @@ public class QuestionsRepository {
         questions.add(new Question(count,
                 Programmering,
                 1,
-                "",
+                "Hvordan fungerer et continue-statement i et loop?",
                 """
-                        
+                        Et continue-statement springer resten af den aktuelle iteration over og fortsætter med næste iteration af loopet.
                         """)
         );
         count++;
@@ -820,9 +820,9 @@ public class QuestionsRepository {
         questions.add(new Question(count,
                 Programmering,
                 1,
-                "",
+                "Hvad er forskellen på en \"else if\" og en \"else\" i et if-statement?",
                 """
-                        
+                        En else if bruges til at teste en ny betingelse, hvis den forrige ikke var sand, mens else bruges som en standardhandling, når alle tidligere betingelser er falske.
                         """)
         );
         count++;
@@ -830,9 +830,13 @@ public class QuestionsRepository {
         questions.add(new Question(count,
                 Programmering,
                 1,
-                "",
+                "Hvordan deklareres og initialiseres et array i Java?",
                 """
+                        Et array deklareres ved at angive typen og bruge firkantede parenteser, og det initialiseres ved at tildele værdier eller angive størrelsen.
                         
+                        int[] numbers = {1, 2, 3, 4, 5};
+                        
+                        int[] moreNumbers = new int[5];
                         """)
         );
         count++;
@@ -840,9 +844,9 @@ public class QuestionsRepository {
         questions.add(new Question(count,
                 Programmering,
                 1,
-                "",
+                "Hvad er forskellen mellem en Array og en ArrayList?",
                 """
-                        
+                        En Array har en fast størrelse, som bestemmes ved deklarationen, og kan ikke ændres senere. En ArrayList er dynamisk, hvilket betyder, at den kan ændre størrelse, når elementer tilføjes eller fjernes. ArrayLists tilbyder også flere funktioner til håndtering af data.
                         """)
         );
         count++;
@@ -850,9 +854,11 @@ public class QuestionsRepository {
         questions.add(new Question(count,
                 Programmering,
                 1,
-                "",
+                "Hvordan kan man finde længden af et array i Java?",
                 """
+                        Længden af et array i Java findes ved at bruge egenskaben length. Det giver antallet af elementer i arrayet.
                         
+                        arrayExample.length
                         """)
         );
         count++;
@@ -860,9 +866,18 @@ public class QuestionsRepository {
         questions.add(new Question(count,
                 Programmering,
                 1,
-                "",
+                "Hvordan opretter og arbejder man med multidimensionale arrays?",
                 """
+                        Multidimensionale arrays oprettes ved at bruge flere sæt firkantede parenteser. Du arbejder med dem ved at specificere indekser for hver dimension.
                         
+                        // Oprettelse af et 2D array
+                        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+                        
+                        // Adgang til elementer
+                        int value = matrix[1][2];  // Værdi: 6
+                        
+                        // Ændring af et element
+                        matrix[0][1] = 10;  // Ændrer værdi i første række og anden kolonne
                         """)
         );
         count++;
@@ -870,9 +885,9 @@ public class QuestionsRepository {
         questions.add(new Question(count,
                 Programmering,
                 1,
-                "",
+                "Hvordan traverserer man et array, og hvorfor er det nyttigt?",
                 """
-                        
+                        Man traverserer et array ved at bruge en løkke, f.eks. en for-loop, til at iterere gennem hvert element. Det er nyttigt, fordi det giver mulighed for at behandle, ændre eller vise hver værdi i arrayet.
                         """)
         );
         count++;
@@ -880,9 +895,9 @@ public class QuestionsRepository {
         questions.add(new Question(count,
                 Programmering,
                 1,
-                "",
+                "Hvad betyder det at have en konstruktør i en klasse, og hvordan fungerer den?",
                 """
-                        
+                        En konstruktør i en klasse er en speciel metode, der bruges til at initialisere objekter af klassen. Den har samme navn som klassen og bliver automatisk kaldt, når et objekt oprettes. Konstruktøren bruges til at sætte de indledende værdier for objektets variabler.
                         """)
         );
         count++;
@@ -890,9 +905,9 @@ public class QuestionsRepository {
         questions.add(new Question(count,
                 Programmering,
                 1,
-                "",
+                "Hvordan adskiller man objektets tilstand (state) fra objektets adfærd (behavior)?",
                 """
-                        
+                        Objektets tilstand (state) består af dets egenskaber (variabler) og deres aktuelle værdier, mens objektets adfærd (behavior) defineres af de handlinger (metoder), det kan udføre. Tilstanden beskriver, hvad objektet er, mens adfærden beskriver, hvad objektet kan gøre.
                         """)
         );
         count++;
@@ -900,9 +915,9 @@ public class QuestionsRepository {
         questions.add(new Question(count,
                 Programmering,
                 1,
-                "",
+                "Hvad er formålet med 'this' keywordet i en klasse?",
                 """
-                        
+                        Formålet med this-keywordet i en klasse er at referere til det aktuelle objekt. Det bruges ofte til at differentiere mellem objektets instansvariabler og parametre med samme navn eller til at kalde andre konstruktører eller metoder inden for samme objekt.
                         """)
         );
         count++;
@@ -910,9 +925,9 @@ public class QuestionsRepository {
         questions.add(new Question(count,
                 Programmering,
                 1,
-                "",
+                "Hvad er en statisk metode, og hvordan adskiller den sig fra en ikke statisk metode?",
                 """
-                        
+                        En statisk metode tilhører klassen og kan kaldes uden at oprette et objekt, mens en ikke-statisk metode tilhører et specifikt objekt og kræver en instans af klassen for at blive brugt. Statisk metode kan ikke direkte tilgå objektets instansvariabler eller ikke-statiske metoder.
                         """)
         );
         count++;
@@ -920,9 +935,9 @@ public class QuestionsRepository {
         questions.add(new Question(count,
                 Programmering,
                 1,
-                "",
+                "Hvordan bruger man try-catch blokke til at håndtere fejl?",
                 """
-                        
+                        En try-catch-blok bruges til at håndtere fejl ved at placere kode, der kan forårsage en exception, i try-blokken. Hvis en fejl opstår, fanges den i catch-blokken, hvor man kan håndtere den uden at stoppe programmet.
                         """)
         );
         count++;
@@ -930,13 +945,42 @@ public class QuestionsRepository {
         questions.add(new Question(count,
                 Programmering,
                 1,
-                "",
+                "Hvordan concatenater man strenge i Java?",
                 """
-                        
+                        Strenge kan concatenates i Java ved at bruge +-operatoren eller metoden concat(). Man kan også bruge en StringBuilder for bedre ydeevne ved mange sammensætninger.
                         """)
         );
         count++;
-
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er forskellen på == og .equals() når man sammenligner strenge i Java?",
+                """
+                        == sammenligner, om to streng-referencer peger på det samme objekt i hukommelsen, mens .equals() sammenligner selve strengens indhold for at afgøre, om de er ens.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvad er StringBuilder, og hvornår er det nyttigt at bruge den?",
+                """
+                        StringBuilder er en klasse, der bruges til at manipulere mutable strenge, hvilket gør den mere effektiv end String, når der foretages mange ændringer. Den er nyttig, når man ofte concatenater eller ændrer strenge, da den undgår at skabe nye objekter for hver ændring.
+                        """)
+        );
+        count++;
+//--------------------------------------------------------------------------------------------------------------------//
+        questions.add(new Question(count,
+                Programmering,
+                1,
+                "Hvordan kan man bruge loops til at finde et element i et array?",
+                """
+                        Man kan bruge en for- eller while-loop til at gennemløbe arrayet og sammenligne hvert element med den ønskede værdi. Hvis et match findes, kan man stoppe loopet eller returnere elementets indeks.
+                        """)
+        );
+        count++;
 //--------------------------------------------------------------------------------------------------------------------//
 
 //2. semester:--------------------------------------------------------------------------------------------------------//
@@ -1485,7 +1529,7 @@ public class QuestionsRepository {
         //--------------------------------------------------------------------------------------------------------------------//
         questions.add(new Question(count,
                 SU,
-                2,
+                 2,
                 "Hvad er formålet med Low coupling / High cohesion?",
                 """
                         Formålet med Low Coupling er at minimere afhængigheder mellem klasser for at gøre systemet mere fleksibelt og robust over for ændringer.
